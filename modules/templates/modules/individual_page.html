@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% for module in modules %}
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-2">
+<ul class="sidebar-nav">
+<li>{{module|safe}}</li>
+      </div>
+    </div>
+  </div>
+</ul>
+{% endfor %}
+
+{% endblock %}
