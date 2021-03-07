@@ -45,3 +45,10 @@ html, body {
 .active:after {
   content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
+
+.sidebar-nav {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+    font: 400 12px/1.5 'Avenir', Helvetica, sans-serif;
+}

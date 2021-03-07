@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from .models import Module
 
 # Create your views here.
+MODULES_TO_DISPLAY = [""]
 
 def index(request):
     modules = Module.objects.all()

@@ -1,0 +1,3 @@
+[submodule "examplejobs"]
+	path = examplejobs
+	url = https://github.com/scottcoughlin2014/examplejobs.git
