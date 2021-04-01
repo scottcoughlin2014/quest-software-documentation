@@ -76,16 +76,27 @@ class Command(BaseCommand):
             for name, versions in software.items():
                 if name not in LIST_OF_MODULES_TO_SEARCH:
                     continue
-                # We need to get the versions ina  different way if there are lots of them because the above method will ellipsis
+                # We need to get the versions in a  different way if there are lots of them because the above method will ellipsis
                 if len(versions) > 2:
                     result = subprocess.run(["/software/lmod/lmod/libexec/lmod", "spider", "{0}/".format(name)], stdout=subprocess.PIPE, stdin = subprocess.PIPE, stderr = subprocess.PIPE)
                     versions = result.stderr.decode("utf-8").split("Versions:\n")[-1].split("\n\n")[0].replace(" ", "").split("\n")
                 obj, created = Module.objects.get_or_create(name=name,)
                 obj.versions = versions
                 obj.preferred = versions[-1]
-                if obj.whatis is None:
-                    result = subprocess.run(["/software/lmod/lmod/libexec/lmod", "whatis", versions[-1]], stdout=subprocess.PIPE, stdin = subprocess.PIPE, stderr = subprocess.PIPE)
-                    obj.whatis = ''.join(result.stderr.decode("utf-8").split(":")[1:])
+                whatis_output = subprocess.run(["/software/lmod/lmod/libexec/lmod", "whatis", versions[-1]], stdout=subprocess.PIPE, stdin = subprocess.PIPE, stderr = subprocess.PIPE)
+                whatis_output = [i.split(":") for i in whatis_output.stderr.decode("utf-8").split("\n")]
+
+                if whatis_output[0][0] != "":
+                    obj.whatis = whatis_output[0][1]
+
+                # now we need to see if there is more to the whatis, i.e. have keywords been added to it.
+                if len(whatis_output) > 1:
+                    for i in whatis_output:
+                        for ii in i:
+                            if "Keywords" in ii:
+                                keywords = [tmp.replace(" ", "") for tmp in ii.split(";")[1:]]
+                                obj.keywords = keywords
+
                 if obj.help_info is None:
                     result = subprocess.run(["/software/lmod/lmod/libexec/lmod", "help", versions[-1]], stdout=subprocess.PIPE, stdin = subprocess.PIPE, stderr = subprocess.PIPE)
                     obj.help_info = ''.join(result.stderr.decode("utf-8").split("\n")[2:])
