@@ -1,0 +1,2173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4-4.1.1/jq-3.3.1/dt-1.10.23/b-1.6.5/b-flash-1.6.5/r-2.2.7/datatables.min.css"/>
+     
+  <script type="text/javascript" src="https://cdn.datatables.net/v/bs4-4.1.1/jq-3.3.1/dt-1.10.23/b-1.6.5/b-flash-1.6.5/r-2.2.7/datatables.min.js"></script>
+
+  <!-- Add additional CSS in static file -->
+  
+  <link rel="stylesheet" href="/static/css/main.css">
+  </head>
+<body>
+
+<title>Quest Software Documentation</title>
+
+    <main>
+    
+
+<h1> Software on Quest</h1>
+<p>This list is subject to change, and additional software not listed here may be available. For the complete list, run the command,
+        <span class="command">module available</span>. Except where noted,
+        <a href="page.php?id=70718">Modules Software Environment Manager</a> must be used to set up your environment to use the Quest software.
+</p>
+
+<p>
+        <a id="quest" name="quest"></a>
+        <strong>
+  Quest Software and Applications
+ </strong>
+</p>
+
+<a href="#" onclick="toggler('Chemistry');">Chemistry</a>
+
+<nav class="navbar navbar-light bg-light mr-auto">
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_ADF" role="tab" aria-controls="collapse_ADF">ADF</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_R" role="tab" aria-controls="collapse_R">R</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_abaqus" role="tab" aria-controls="collapse_abaqus">abaqus</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_abinit" role="tab" aria-controls="collapse_abinit">abinit</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_ansys" role="tab" aria-controls="collapse_ansys">ansys</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_aspera" role="tab" aria-controls="collapse_aspera">aspera</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_blas-lapack" role="tab" aria-controls="collapse_blas-lapack">blas-lapack</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_boost" role="tab" aria-controls="collapse_boost">boost</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_charmpp" role="tab" aria-controls="collapse_charmpp">charmpp</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_cmake" role="tab" aria-controls="collapse_cmake">cmake</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_cuda" role="tab" aria-controls="collapse_cuda">cuda</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_fftw" role="tab" aria-controls="collapse_fftw">fftw</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_firefox" role="tab" aria-controls="collapse_firefox">firefox</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_freesurfer" role="tab" aria-controls="collapse_freesurfer">freesurfer</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_fsl" role="tab" aria-controls="collapse_fsl">fsl</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_gatk" role="tab" aria-controls="collapse_gatk">gatk</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_gauss" role="tab" aria-controls="collapse_gauss">gauss</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_gcc" role="tab" aria-controls="collapse_gcc">gcc</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_gdal" role="tab" aria-controls="collapse_gdal">gdal</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_geos" role="tab" aria-controls="collapse_geos">geos</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_git" role="tab" aria-controls="collapse_git">git</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_gromacs" role="tab" aria-controls="collapse_gromacs">gromacs</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_gsl" role="tab" aria-controls="collapse_gsl">gsl</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_gurobi" role="tab" aria-controls="collapse_gurobi">gurobi</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_hdf5" role="tab" aria-controls="collapse_hdf5">hdf5</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_intel" role="tab" aria-controls="collapse_intel">intel</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_java" role="tab" aria-controls="collapse_java">java</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_julia" role="tab" aria-controls="collapse_julia">julia</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_knitro" role="tab" aria-controls="collapse_knitro">knitro</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_lammps" role="tab" aria-controls="collapse_lammps">lammps</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_latte" role="tab" aria-controls="collapse_latte">latte</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_lumerical" role="tab" aria-controls="collapse_lumerical">lumerical</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_mathematica" role="tab" aria-controls="collapse_mathematica">mathematica</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_matlab" role="tab" aria-controls="collapse_matlab">matlab</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_mpi" role="tab" aria-controls="collapse_mpi">mpi</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_namd" role="tab" aria-controls="collapse_namd">namd</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_netcdf-c" role="tab" aria-controls="collapse_netcdf-c">netcdf-c</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_netcdf-fortran" role="tab" aria-controls="collapse_netcdf-fortran">netcdf-fortran</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_nwchem" role="tab" aria-controls="collapse_nwchem">nwchem</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_openblas" role="tab" aria-controls="collapse_openblas">openblas</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_opera" role="tab" aria-controls="collapse_opera">opera</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_orca" role="tab" aria-controls="collapse_orca">orca</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_paraview" role="tab" aria-controls="collapse_paraview">paraview</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_proj" role="tab" aria-controls="collapse_proj">proj</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_python" role="tab" aria-controls="collapse_python">python</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_python-anaconda3" role="tab" aria-controls="collapse_python-anaconda3">python-anaconda3</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_qchem" role="tab" aria-controls="collapse_qchem">qchem</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_qt" role="tab" aria-controls="collapse_qt">qt</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_quantum-espresso" role="tab" aria-controls="collapse_quantum-espresso">quantum-espresso</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_scalapack" role="tab" aria-controls="collapse_scalapack">scalapack</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_singularity" role="tab" aria-controls="collapse_singularity">singularity</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_sratoolkit" role="tab" aria-controls="collapse_sratoolkit">sratoolkit</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_stat" role="tab" aria-controls="collapse_stat">stat</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_stata" role="tab" aria-controls="collapse_stata">stata</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_stattransfer" role="tab" aria-controls="collapse_stattransfer">stattransfer</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_tcl" role="tab" aria-controls="collapse_tcl">tcl</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_texlive" role="tab" aria-controls="collapse_texlive">texlive</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_vasp" role="tab" aria-controls="collapse_vasp">vasp</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_mercurial" role="tab" aria-controls="collapse_mercurial">mercurial</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_gnuplot" role="tab" aria-controls="collapse_gnuplot">gnuplot</a>
+
+</nav>
+</p>
+</ul>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-1">
+        </div>
+        <div class="col-sm-9">
+            <div class="accordion" id="accordionExample">
+                
+                    <div class="card" id="Chemistry">
+                         <div class="card-header" id="heading_ADF">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_ADF" aria-expanded="true" aria-controls="collapse_ADF">
+                                 ADF
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_ADF" class="collapse" aria-labelledby="heading_ADF" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">ADF/2014.04</pre>  <pre class="code">ADF/2016.107</pre>  <pre class="code">ADF/2017.105</pre>  <pre class="code">ADF/2017.112</pre>  <pre class="code">ADF/2018.104</pre>  <pre class="code">ADF/2020.102</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">ADF/2020.102</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> Amsterdam Density Functional (ADF) is a program for first-principles electronic structure calculations that makes use of density functional theory. <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>	 Adds the path for ADF<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_R">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_R" aria-expanded="true" aria-controls="collapse_R">
+                                 R
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_R" class="collapse" aria-labelledby="heading_R" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">R/2.15.3</pre>  <pre class="code">R/3.0.2</pre>  <pre class="code">R/3.1.1</pre>  <pre class="code">R/3.1.2</pre>  <pre class="code">R/3.2.0</pre>  <pre class="code">R/3.2.1</pre>  <pre class="code">R/3.2.2</pre>  <pre class="code">R/3.3.1</pre>  <pre class="code">R/3.3.2</pre>  <pre class="code">R/3.3.3</pre>  <pre class="code">R/3.4.1</pre>  <pre class="code">R/3.4.3</pre>  <pre class="code">R/3.4.4</pre>  <pre class="code">R/3.5.1a</pre>  <pre class="code">R/3.5.1</pre>  <pre class="code">R/3.6.0</pre>  <pre class="code">R/3.6.2</pre>  <pre class="code">R/3.6.3</pre>  <pre class="code">R/4.0.0</pre>  <pre class="code">R/4.0.3</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">R/4.0.3</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> This module adds R-4.0.3 <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>This module adds stattransfer/14 to various paths<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_abaqus">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_abaqus" aria-expanded="true" aria-controls="collapse_abaqus">
+                                 abaqus
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_abaqus" class="collapse" aria-labelledby="heading_abaqus" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">abaqus/6.11-2</pre>  <pre class="code">abaqus/6.12-2</pre>  <pre class="code">abaqus/6.13-1</pre>  <pre class="code">abaqus/2017</pre>  <pre class="code">abaqus/2019</pre>  <pre class="code">abaqus/2020</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">abaqus/2020</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> This module adds abaqus/2020 to your path <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>This module adds abaqus/2020 to your pathExecutable can be launched with: abaqus<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="Chemistry">
+                         <div class="card-header" id="heading_abinit">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_abinit" aria-expanded="true" aria-controls="collapse_abinit">
+                                 abinit
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_abinit" class="collapse" aria-labelledby="heading_abinit" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">abinit/8.10.3-openmpi-4.0.5-intel-19.0.5.281</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">abinit/8.10.3-openmpi-4.0.5-intel-19.0.5.281</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> ABINIT is a package whose main program allows one to find the total energy, charge density and electronic structure of systems made of electrons and nuclei (molecules and periodic solids) within Density Functional Theory (DFT), using pseudopotentials and a planewave or wavelet basis. <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>ABINIT is a package whose main program allows one to find the totalenergy, charge density and electronic structure of systems made ofelectrons and nuclei (molecules and periodic solids) within DensityFunctional Theory (DFT), using pseudopotentials and a planewave orwavelet basis. ABINIT also includes options to optimize the geometryaccording to the DFT forces and stresses, or to perform moleculardynamics simulations using these forces, or to generate dynamicalmatrices, Born effective charges, and dielectric tensors, based onDensity-Functional Perturbation Theory, and many more properties.Excited states can be computed within the Many-Body Perturbation Theory(the GW approximation and the Bethe-Salpeter equation), and Time-Dependent Density Functional Theory (for molecules). In addition to themain ABINIT code, different utility programs are provided.<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">#!/bin/bash
+#SBATCH --account=a9009  ## YOUR ACCOUNT pXXXX or bXXXX
+#SBATCH --partition=master  ### PARTITION (buyin, short, normal, etc)
+#SBATCH --nodes=2 ## how many computers do you need
+#SBATCH --ntasks-per-node=4 ## how many cpus or processors do you need on each computer
+#SBATCH --time=00:20:00 ## how long does this need to run (remember different partitions have restrictions on this param)
+#SBATCH --mem-per-cpu=3G ## how much RAM do you need per CPU (this effects your FairShare score so be careful to not ask for more than you need))
+#SBATCH --job-name=sample_job  ## When you run squeue -u NETID this is how you can identify the job
+#SBATCH --output=outlog_qe_6.7_intel ## standard out and standard error goes to this file
+#SBATCH --constraint="[quest5|quest6|quest8|quest9|quest10]"
+
+module purge all
+module load abinit/8.10.3-openmpi-4.0.5-intel-19.0.5.281
+export SLURM_MPI_TYPE=pmix_v3
+
+mpirun -np $SLURM_NTASKS abinit <tbase1_x.files> log.stdout
+#srun -n ${SLURM_NTASKS} pw.x < ./qe.in > ./qe.out
+</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_ansys">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_ansys" aria-expanded="true" aria-controls="collapse_ansys">
+                                 ansys
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_ansys" class="collapse" aria-labelledby="heading_ansys" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">ansys/19.4</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">ansys/19.4</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> adds Ansys to your environment variables <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>	Adds Ansys to your environment variables<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_aspera">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_aspera" aria-expanded="true" aria-controls="collapse_aspera">
+                                 aspera
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_aspera" class="collapse" aria-labelledby="heading_aspera" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">aspera/ascp-client</pre>  <pre class="code">aspera/3.10.0</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">aspera/3.10.0</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> Sets up Aspera ascp-client in your environment <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>This module adds Aspera ascp-client to your path<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_blas-lapack">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_blas-lapack" aria-expanded="true" aria-controls="collapse_blas-lapack">
+                                 blas-lapack
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_blas-lapack" class="collapse" aria-labelledby="heading_blas-lapack" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">blas-lapack/3.4.0_gcc</pre>  <pre class="code">blas-lapack/3.4.0_intel</pre>  <pre class="code">blas-lapack/3.5.0_gcc</pre>  <pre class="code">blas-lapack/3.5.0_intel</pre>  <pre class="code">blas-lapack/3.5.0</pre>  <pre class="code">blas-lapack/3.5.0.1</pre>  <pre class="code">blas-lapack/3.6.0_gcc</pre>  <pre class="code">blas-lapack/3.8.0_gcc</pre>  <pre class="code">blas-lapack/3.8.0_intel</pre>  <pre class="code">blas-lapack/3.9.0_gcc</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">blas-lapack/3.9.0_gcc</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> This module adds intel compiled lapack and blas 3.9.0 libraries to your path  <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>This module adds intel compiled lapack and blas to your path<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_boost">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_boost" aria-expanded="true" aria-controls="collapse_boost">
+                                 boost
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_boost" class="collapse" aria-labelledby="heading_boost" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">boost/1.41.0</pre>  <pre class="code">boost/1.56.0</pre>  <pre class="code">boost/1.57.0</pre>  <pre class="code">boost/1.58.0</pre>  <pre class="code">boost/1.61.0</pre>  <pre class="code">boost/1.64.0</pre>  <pre class="code">boost/1.65.1</pre>  <pre class="code">boost/1.70.0</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">boost/1.70.0</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> This module adds boost/1.70.0  <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>This module adds boost/1.70.0<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_charmpp">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_charmpp" aria-expanded="true" aria-controls="collapse_charmpp">
+                                 charmpp
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_charmpp" class="collapse" aria-labelledby="heading_charmpp" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">charmpp/6.10.2-openmpi-4.0.5-intel-19.0.5.281</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">charmpp/6.10.2-openmpi-4.0.5-intel-19.0.5.281</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> Charm++ is a parallel programming framework in C++ supported by an adaptive runtime system, which enhances user productivity and allows programs to run portably from small multicore computers (your laptop) to the largest supercomputers. <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>Charm++ is a parallel programming framework in C++ supported by anadaptive runtime system, which enhances user productivity and allowsprograms to run portably from small multicore computers (your laptop) tothe largest supercomputers.<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_cmake">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_cmake" aria-expanded="true" aria-controls="collapse_cmake">
+                                 cmake
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_cmake" class="collapse" aria-labelledby="heading_cmake" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">cmake/2.8.1</pre>  <pre class="code">cmake/2.8.11.1</pre>  <pre class="code">cmake/3.1.0</pre>  <pre class="code">cmake/3.4.0</pre>  <pre class="code">cmake/3.12.0</pre>  <pre class="code">cmake/3.15.4</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">cmake/3.15.4</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> This module adds cmake/3.15.4  <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>This module adds cmake/3.15.4<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_cuda">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_cuda" aria-expanded="true" aria-controls="collapse_cuda">
+                                 cuda
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_cuda" class="collapse" aria-labelledby="heading_cuda" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">cuda/cuda_4.0.17</pre>  <pre class="code">cuda/cuda_4.1.28</pre>  <pre class="code">cuda/cuda_5.0.35</pre>  <pre class="code">cuda/cuda_5.5.22</pre>  <pre class="code">cuda/cuda_6.0.26_rc</pre>  <pre class="code">cuda/cuda_7.0.28_mpich</pre>  <pre class="code">cuda/cuda_7.0.28</pre>  <pre class="code">cuda/cuda_7.5.18_mpich</pre>  <pre class="code">cuda/cuda_7.5.18</pre>  <pre class="code">cuda/cuda_8.0.61_mpich</pre>  <pre class="code">cuda/cuda_8.0.61</pre>  <pre class="code">cuda/cuda-9.2_mpich</pre>  <pre class="code">cuda/cuda-9.2</pre>  <pre class="code">cuda/cuda-10.1.2-openmpi-3.1.3</pre>  <pre class="code">cuda/cuda-10.1.2</pre>  <pre class="code">cuda/11.2.1-gcc-10.2.0</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">cuda/11.2.1-gcc-10.2.0</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> CUDA is a parallel computing platform and programming model invented by NVIDIA. It enables dramatic increases in computing performance by harnessing the power of the graphics processing unit (GPU). <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p><p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_fftw">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_fftw" aria-expanded="true" aria-controls="collapse_fftw">
+                                 fftw
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_fftw" class="collapse" aria-labelledby="heading_fftw" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">fftw/2.1.5-gcc</pre>  <pre class="code">fftw/2.1.5-intel</pre>  <pre class="code">fftw/2.1.5-mpich-intel</pre>  <pre class="code">fftw/2.1.5-ompi-intel</pre>  <pre class="code">fftw/3.3.1-gcc</pre>  <pre class="code">fftw/3.3.1-intel</pre>  <pre class="code">fftw/3.3.3-gcc-sse2</pre>  <pre class="code">fftw/3.3.3-gcc</pre>  <pre class="code">fftw/3.3.4-gcc-sse</pre>  <pre class="code">fftw/3.3.4-openmpi-4.0.5-intel-19.0.5.281</pre>  <pre class="code">fftw/3.3.8-ompi-gcc</pre>  <pre class="code">fftw/3.3.8-openmpi-4.0.5-gcc-10.2.0</pre>  <pre class="code">fftw/3.3.8-openmpi-4.0.5-intel-19.0.5.281</pre>  <pre class="code">fftw/3.3.9-openmpi-4.0.5-intel-19.0.5.281</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">fftw/3.3.9-openmpi-4.0.5-intel-19.0.5.281</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> FFTW is a C subroutine library for computing the discrete Fourier transform (DFT) in one or more dimensions, of arbitrary input size, and of both real and complex data (as well as of even/odd data, i.e. the discrete cosine/sine transforms or DCT/DST). We believe that FFTW, which is free software, should become the FFT library of choice for most applications. <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>FFTW is a C subroutine library for computing the discrete Fouriertransform (DFT) in one or more dimensions, of arbitrary input size, andof both real and complex data (as well as of even/odd data, i.e. thediscrete cosine/sine transforms or DCT/DST). We believe that FFTW, whichis free software, should become the FFT library of choice for mostapplications.<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_firefox">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_firefox" aria-expanded="true" aria-controls="collapse_firefox">
+                                 firefox
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_firefox" class="collapse" aria-labelledby="heading_firefox" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">firefox/14</pre>  <pre class="code">firefox/22</pre>  <pre class="code">firefox/26</pre>  <pre class="code">firefox/27</pre>  <pre class="code">firefox/31</pre>  <pre class="code">firefox/40</pre>  <pre class="code">firefox/50</pre>  <pre class="code">firefox/62</pre>  <pre class="code">firefox/82</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">firefox/82</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> Sets up Firefox 82 in your environment <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>This module adds Firefox 82 to your path<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_freesurfer">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_freesurfer" aria-expanded="true" aria-controls="collapse_freesurfer">
+                                 freesurfer
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_freesurfer" class="collapse" aria-labelledby="heading_freesurfer" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">freesurfer/5.3</pre>  <pre class="code">freesurfer/6.0</pre>  <pre class="code">freesurfer/7dev</pre>  <pre class="code">freesurfer/7.1</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">freesurfer/7.1</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> This module adds freesurfer/7.1 to your environment <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>This module adds freesurfer/7.1 to your environment<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_fsl">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_fsl" aria-expanded="true" aria-controls="collapse_fsl">
+                                 fsl
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_fsl" class="collapse" aria-labelledby="heading_fsl" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">fsl/5.0.8</pre>  <pre class="code">fsl/5.0.11</pre>  <pre class="code">fsl/6.0.3</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">fsl/6.0.3</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> This module adds fsl/6.0.3 <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>This module adds fsl/6.0.3 to various paths<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_gatk">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_gatk" aria-expanded="true" aria-controls="collapse_gatk">
+                                 gatk
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_gatk" class="collapse" aria-labelledby="heading_gatk" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">gatk/3.4.0</pre>  <pre class="code">gatk/3.6.0</pre>  <pre class="code">gatk/3.7.0</pre>  <pre class="code">gatk/4.0.0</pre>  <pre class="code">gatk/4.0.4</pre>  <pre class="code">gatk/4.1.0</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">gatk/4.1.0</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> Sets up GATK 4.1.0 in your environment <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>This module adds gatk/4.1.0 to various pathsSee http://www.broadinstitute.org/gsa/wiki/index.php/Introduction_to_the_GATK#Using_the_GATK for further details<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_gauss">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_gauss" aria-expanded="true" aria-controls="collapse_gauss">
+                                 gauss
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_gauss" class="collapse" aria-labelledby="heading_gauss" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">gauss/gauss17</pre>  <pre class="code">gauss/gauss18</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">gauss/gauss18</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> This module adds gauss/gauss18 to your environment <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>This module adds gauss/gauss18 to your environment<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_gcc">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_gcc" aria-expanded="true" aria-controls="collapse_gcc">
+                                 gcc
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_gcc" class="collapse" aria-labelledby="heading_gcc" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">gcc/4.6.3</pre>  <pre class="code">gcc/4.7.0</pre>  <pre class="code">gcc/4.8.3</pre>  <pre class="code">gcc/4.9.2</pre>  <pre class="code">gcc/5.1.0</pre>  <pre class="code">gcc/6.3.0</pre>  <pre class="code">gcc/6.4.0</pre>  <pre class="code">gcc/8.4.0</pre>  <pre class="code">gcc/9.2.0</pre>  <pre class="code">gcc/10.2.0-gcc-4.8.5</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">gcc/10.2.0-gcc-4.8.5</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, Ada, and Go, as well as libraries for these languages. <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>The GNU Compiler Collection includes front ends for C, C++, Objective-C,Fortran, Ada, and Go, as well as libraries for these languages.<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_gdal">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_gdal" aria-expanded="true" aria-controls="collapse_gdal">
+                                 gdal
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_gdal" class="collapse" aria-labelledby="heading_gdal" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">gdal/2.4.1</pre>  <pre class="code">gdal/3.1.3</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">gdal/3.1.3</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> This module adds gdal/3.1.3  <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>This module adds gdal/3.1.3 <p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_geos">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_geos" aria-expanded="true" aria-controls="collapse_geos">
+                                 geos
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_geos" class="collapse" aria-labelledby="heading_geos" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">geos/3.8.0</pre>  <pre class="code">geos/3.8.1</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">geos/3.8.1</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> This module adds geos Version 3.8.1 to your environment <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>This module adds geos Version 3.8.1 to your environment<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_git">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_git" aria-expanded="true" aria-controls="collapse_git">
+                                 git
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_git" class="collapse" aria-labelledby="heading_git" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">git/2.1.3</pre>  <pre class="code">git/2.8.2</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">git/2.8.2</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> This module adds git/2.8.2 to your environment <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>This module adds git/2.8.2 to your environment<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_gromacs">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_gromacs" aria-expanded="true" aria-controls="collapse_gromacs">
+                                 gromacs
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_gromacs" class="collapse" aria-labelledby="heading_gromacs" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">gromacs/4.5.5</pre>  <pre class="code">gromacs/4.6.5</pre>  <pre class="code">gromacs/4.6.7-cuda</pre>  <pre class="code">gromacs/4.6.7</pre>  <pre class="code">gromacs/5.0.4-cuda</pre>  <pre class="code">gromacs/5.0.4</pre>  <pre class="code">gromacs/2016.3</pre>  <pre class="code">gromacs/2020.4-openmpi-4.0.5-gcc-10.2.0</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">gromacs/2020.4-openmpi-4.0.5-gcc-10.2.0</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> GROMACS (GROningen MAchine for Chemical Simulations) is a molecular dynamics package primarily designed for simulations of proteins, lipids and nucleic acids. It was originally developed in the Biophysical Chemistry department of University of Groningen, and is now maintained by contributors in universities and research centers across the world. <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>GROMACS (GROningen MAchine for Chemical Simulations) is a moleculardynamics package primarily designed for simulations of proteins, lipidsand nucleic acids. It was originally developed in the BiophysicalChemistry department of University of Groningen, and is now maintainedby contributors in universities and research centers across the world.GROMACS is one of the fastest and most popular software packagesavailable and can run on CPUs as well as GPUs. It is free, open sourcereleased under the GNU General Public License. Starting from version4.6, GROMACS is released under the GNU Lesser General Public License.<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_gsl">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_gsl" aria-expanded="true" aria-controls="collapse_gsl">
+                                 gsl
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_gsl" class="collapse" aria-labelledby="heading_gsl" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">gsl/1.15RH6</pre>  <pre class="code">gsl/1.16-gcc4.8.3</pre>  <pre class="code">gsl/1.16-intel</pre>  <pre class="code">gsl/1.16</pre>  <pre class="code">gsl/2.1-gcc-4.8.5</pre>  <pre class="code">gsl/2.1-gcc4.8.3</pre>  <pre class="code">gsl/2.5-gcc-6.4.0</pre>  <pre class="code">gsl/2.5-intel-19.0.5.281</pre>  <pre class="code">gsl/2.6-gcc-8.4.0</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">gsl/2.6-gcc-8.4.0</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> This module adds gsl-2.6 <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>This module adds gsl-2.6<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_gurobi">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_gurobi" aria-expanded="true" aria-controls="collapse_gurobi">
+                                 gurobi
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_gurobi" class="collapse" aria-labelledby="heading_gurobi" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">gurobi/6.5.2</pre>  <pre class="code">gurobi/7.5.1</pre>  <pre class="code">gurobi/7.5.1-3.6</pre>  <pre class="code">gurobi/9.1.0</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">gurobi/9.1.0</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> This module adds gurobi/9.1.0 to your environment <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>This module adds gurobi/9.1.0 to your environment<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_hdf5">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_hdf5" aria-expanded="true" aria-controls="collapse_hdf5">
+                                 hdf5
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_hdf5" class="collapse" aria-labelledby="heading_hdf5" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">hdf5/1.8.10</pre>  <pre class="code">hdf5/1.8.12-serial</pre>  <pre class="code">hdf5/1.8.12</pre>  <pre class="code">hdf5/1.8.15-serial</pre>  <pre class="code">hdf5/1.8.19-serial</pre>  <pre class="code">hdf5/1.10.7-openmpi-4.0.5-intel-19.0.5.281</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">hdf5/1.10.7-openmpi-4.0.5-intel-19.0.5.281</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> HDF5 is a data model, library, and file format for storing and managing data. It supports an unlimited variety of datatypes, and is designed for flexible and efficient I/O and for high volume and complex data.  <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>HDF5 is a data model, library, and file format for storing and managingdata. It supports an unlimited variety of datatypes, and is designed forflexible and efficient I/O and for high volume and complex data.<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_intel">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_intel" aria-expanded="true" aria-controls="collapse_intel">
+                                 intel
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_intel" class="collapse" aria-labelledby="heading_intel" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">intel/2011.3</pre>  <pre class="code">intel/2013.2</pre>  <pre class="code">intel/2015.0</pre>  <pre class="code">intel/2016.0</pre>  <pre class="code">intel/2019.5</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">intel/2019.5</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> Name<p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>Intel compilers 2019.5 produce optimized code that can run significantlyfaster by taking advantage of the ever increasing core count and vectorregister width in Intel Xeon processors, Intel Xeon Phi coprocessors andcompatible processors. The Intel compilers plug right into popular developmentenvironments and are compatible with compilers including GCC (Linux).The Intel module enables the Intel family of compilers (C/C++ and Fortran) andupdates the $PATH, $LD_LIBRARY_PATH, $INCLUDE, and $MANPATH environmentvariables to access the compiler binaries, libraries, include files, andavailable man pages, respectively.The following additional environment variables are also defined:$ICC_BIN                (path to icc/icpc compilers          )$ICC_LIB                (path to C/C++  libraries            )$IFC_BIN                (path to ifort compiler              )$IFC_LIB                (path to Fortran libraries           )In general, users need only to add the &quot;-mkl&quot; flag during compile and link timeto utlize thei Math Kernel Library provided by Intel.  This includes any callsto BLAS and LAPACK functions.See the man pages for icc, icpc, and ifort for detailed information onavailable compiler options and command-line syntax.Version 2019.5<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_java">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_java" aria-expanded="true" aria-controls="collapse_java">
+                                 java
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_java" class="collapse" aria-labelledby="heading_java" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">java/jdk1.6.0_32</pre>  <pre class="code">java/jdk1.7.0_04</pre>  <pre class="code">java/jdk1.8.0_25</pre>  <pre class="code">java/jdk1.8.0_191</pre>  <pre class="code">java/jdk11.0.10</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">java/jdk11.0.10</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> This module adds java/jdk11.0.10  <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>This module adds java/jdk11.0.10<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_julia">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_julia" aria-expanded="true" aria-controls="collapse_julia">
+                                 julia
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_julia" class="collapse" aria-labelledby="heading_julia" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">julia/0.5.2</pre>  <pre class="code">julia/0.6.2</pre>  <pre class="code">julia/1.3.1</pre>  <pre class="code">julia/1.5.3</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">julia/1.5.3</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> This module adds julia/1.5.3 <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>This module adds julia/1.5.3 to various paths<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_knitro">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_knitro" aria-expanded="true" aria-controls="collapse_knitro">
+                                 knitro
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_knitro" class="collapse" aria-labelledby="heading_knitro" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">knitro/8</pre>  <pre class="code">knitro/9.1.orig</pre>  <pre class="code">knitro/9.1</pre>  <pre class="code">knitro/10.0</pre>  <pre class="code">knitro/10.3</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">knitro/10.3</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> This module sets up the environment for knitro/10.3  <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>This module sets up the environment for knitro/10.3<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_lammps">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_lammps" aria-expanded="true" aria-controls="collapse_lammps">
+                                 lammps
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_lammps" class="collapse" aria-labelledby="heading_lammps" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">lammps/lammps-gcc-mkl</pre>  <pre class="code">lammps/lammps-gcc</pre>  <pre class="code">lammps/lammps-intel-mkl</pre>  <pre class="code">lammps/lammps-intel</pre>  <pre class="code">lammps/lammps-mpich</pre>  <pre class="code">lammps/lammps-22Aug18</pre>  <pre class="code">lammps/lammps-31Mar17-mpich</pre>  <pre class="code">lammps/20200303-openmpi-4.0.5-intel-19.0.5.281</pre>  <pre class="code">lammps/20210310-openmpi-4.0.5-intel-19.0.5.281</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">lammps/20210310-openmpi-4.0.5-intel-19.0.5.281</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> LAMMPS stands for Large-scale Atomic/Molecular Massively Parallel Simulator. This package uses patch releases, not stable release. See https<p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>LAMMPS stands for Large-scale Atomic/Molecular Massively ParallelSimulator. This package uses patch releases, not stable release. Seehttps://github.com/spack/spack/pull/5342 for a detailed discussion.<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">#!/bin/bash
+#SBATCH --account=a9009  ## YOUR ACCOUNT pXXXX or bXXXX
+#SBATCH --partition=master  ### PARTITION (buyin, short, normal, etc)
+#SBATCH --nodes=2 ## how many computers do you need
+#SBATCH --ntasks-per-node=4 ## how many cpus or processors do you need on each computer
+#SBATCH --time=00:20:00 ## how long does this need to run (remember different partitions have restrictions on this param)
+#SBATCH --mem-per-cpu=3G ## how much RAM do you need per CPU (this effects your FairShare score so be careful to not ask for more than you need))
+#SBATCH --job-name=lammps_openmpi  ## When you run squeue -u NETID this is how you can identify the job
+#SBATCH --output=outlog_lammps_openmpi_intel ## standard out and standard error goes to this file
+#SBATCH --constraint="[quest5|quest6|quest8|quest9|quest10]"
+
+module purge ALL
+module load lammps/20200303-openmpi-4.0.5-intel-19.0.5.281
+
+mpirun -np ${SLURM_NTASKS} lmp -in in.lj
+#srun --mpi=pmix_v3 lmp -in in.lj
+
+</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_latte">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_latte" aria-expanded="true" aria-controls="collapse_latte">
+                                 latte
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_latte" class="collapse" aria-labelledby="heading_latte" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">latte/1.2.2-openmpi-4.0.5-intel-19.0.5.281</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">latte/1.2.2-openmpi-4.0.5-intel-19.0.5.281</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> Open source density functional tight binding molecular dynamics. <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>Open source density functional tight binding molecular dynamics.<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_lumerical">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_lumerical" aria-expanded="true" aria-controls="collapse_lumerical">
+                                 lumerical
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_lumerical" class="collapse" aria-labelledby="heading_lumerical" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">lumerical/device-6.0.125</pre>  <pre class="code">lumerical/8.11.318</pre>  <pre class="code">lumerical/8.12.631</pre>  <pre class="code">lumerical/8.17.1057-test</pre>  <pre class="code">lumerical/8.17.1057</pre>  <pre class="code">lumerical/2016.a</pre>  <pre class="code">lumerical/2020r2</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">lumerical/2020r2</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> This module adds lumerical/2020r2  <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>This module adds lumerical/2020r2<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_mathematica">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_mathematica" aria-expanded="true" aria-controls="collapse_mathematica">
+                                 mathematica
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_mathematica" class="collapse" aria-labelledby="heading_mathematica" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">mathematica/10.3.0</pre>  <pre class="code">mathematica/10.4.1</pre>  <pre class="code">mathematica/11.0.1</pre>  <pre class="code">mathematica/12.0</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">mathematica/12.0</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> Sets up mathematica 12.0 in your enviornment <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>This module adds mathematica 12.0 to various paths<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_matlab">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_matlab" aria-expanded="true" aria-controls="collapse_matlab">
+                                 matlab
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_matlab" class="collapse" aria-labelledby="heading_matlab" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">matlab/r2013a</pre>  <pre class="code">matlab/r2014a</pre>  <pre class="code">matlab/r2014b</pre>  <pre class="code">matlab/r2015a</pre>  <pre class="code">matlab/r2015b</pre>  <pre class="code">matlab/r2016a</pre>  <pre class="code">matlab/r2017a</pre>  <pre class="code">matlab/r2018a</pre>  <pre class="code">matlab/r2018b</pre>  <pre class="code">matlab/r2020b</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">matlab/r2020b</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> Sets up MATLAB R2020b in your environment <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>This module adds MATLAB R2020b and gcc 6.4.0 to your path<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_mpi">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_mpi" aria-expanded="true" aria-controls="collapse_mpi">
+                                 mpi
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_mpi" class="collapse" aria-labelledby="heading_mpi" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">mpi/intel-mpi-4.0.3</pre>  <pre class="code">mpi/intel-mpi-4.1.0</pre>  <pre class="code">mpi/intel-mpi-5.1.3.258</pre>  <pre class="code">mpi/mpich-3.0.4-gcc-4.6.3</pre>  <pre class="code">mpi/mpich-3.0.4-gcc-4.8.3</pre>  <pre class="code">mpi/mpich-3.0.4-gcc-5.1.0</pre>  <pre class="code">mpi/mpich-3.0.4-gcc-6.4.0</pre>  <pre class="code">mpi/mpich-3.0.4-intel2013.2</pre>  <pre class="code">mpi/mpich-3.0.4-intel2015.0</pre>  <pre class="code">mpi/mpich-3.3-gcc-6.4.0</pre>  <pre class="code">mpi/mvapich2-gcc-4.8.3-cuda8</pre>  <pre class="code">mpi/mvapich2-gcc-4.8.3</pre>  <pre class="code">mpi/mvapich2-intel2013.2</pre>  <pre class="code">mpi/openmpi-1.6.3-gcc-4.6.3</pre>  <pre class="code">mpi/openmpi-1.6.3-gcc-4.8.3</pre>  <pre class="code">mpi/openmpi-1.6.3-intel2011.3</pre>  <pre class="code">mpi/openmpi-1.6.3-intel2013.2</pre>  <pre class="code">mpi/openmpi-1.6.5-intel2013.2</pre>  <pre class="code">mpi/openmpi-1.7.2-gcc-4.6.3</pre>  <pre class="code">mpi/openmpi-1.7.2-intel2013.2</pre>  <pre class="code">mpi/openmpi-1.8.1-gcc-4.6.3</pre>  <pre class="code">mpi/openmpi-1.8.1-intel2013.2</pre>  <pre class="code">mpi/openmpi-1.8.3-gcc-4.8.3-mpi-threads</pre>  <pre class="code">mpi/openmpi-1.8.3-gcc-4.8.3</pre>  <pre class="code">mpi/openmpi-1.8.3-gcc-5.1.0</pre>  <pre class="code">mpi/openmpi-1.8.3-intel2013.2</pre>  <pre class="code">mpi/openmpi-1.8.3-intel2015.0</pre>  <pre class="code">mpi/openmpi-1.8.6-gcc-4.8.3-debug</pre>  <pre class="code">mpi/openmpi-1.8.6-gcc-4.8.3</pre>  <pre class="code">mpi/openmpi-1.8.6-gcc-5.1.0</pre>  <pre class="code">mpi/openmpi-1.8.6-intel2013.2</pre>  <pre class="code">mpi/openmpi-1.10.5-gcc-4.8.3</pre>  <pre class="code">mpi/openmpi-1.10.5-gcc-6.4.0</pre>  <pre class="code">mpi/openmpi-1.10.5-intel2013.2</pre>  <pre class="code">mpi/openmpi-1.10.5-intel2015.0</pre>  <pre class="code">mpi/openmpi-1.10.5-intel2016.0</pre>  <pre class="code">mpi/openmpi-2.0.2-gcc-6.4.0-compute</pre>  <pre class="code">mpi/openmpi-2.1.1-gcc-5.1.0</pre>  <pre class="code">mpi/openmpi-2.1.2-intel2016.0</pre>  <pre class="code">mpi/openmpi-2.1.6-gcc-6.4.0</pre>  <pre class="code">mpi/openmpi-3.0.0-intel2016.0</pre>  <pre class="code">mpi/openmpi-3.1.3-gcc-6.4.0</pre>  <pre class="code">mpi/openmpi-3.1.3-gcc-8.4.0</pre>  <pre class="code">mpi/openmpi-4.0.5-gcc-10.2.0</pre>  <pre class="code">mpi/openmpi-4.0.5-intel-19.0.5.281</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">mpi/openmpi-4.0.5-intel-19.0.5.281</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> An open source Message Passing Interface implementation. <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>An open source Message Passing Interface implementation. The Open MPIProject is an open source Message Passing Interface implementation thatis developed and maintained by a consortium of academic, research, andindustry partners. Open MPI is therefore able to combine the expertise,technologies, and resources from all across the High PerformanceComputing community in order to build the best MPI library available.Open MPI offers advantages for system and software vendors, applicationdevelopers and computer science researchers.<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_namd">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_namd" aria-expanded="true" aria-controls="collapse_namd">
+                                 namd
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_namd" class="collapse" aria-labelledby="heading_namd" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">namd/2.14-openmpi-4.0.5-intel-19.0.5.281</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">namd/2.14-openmpi-4.0.5-intel-19.0.5.281</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> NAMDis a parallel molecular dynamics code designed for high-performance simulation of large biomolecular systems. <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>NAMDis a parallel molecular dynamics code designed for high-performancesimulation of large biomolecular systems.<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">#!/bin/bash
+#SBATCH --account=a9009  ## YOUR ACCOUNT pXXXX or bXXXX
+#SBATCH --partition=master  ### PARTITION (buyin, short, normal, etc)
+#SBATCH --nodes=1 ## how many computers do you need
+#SBATCH --ntasks-per-node=14 ## how many cpus or processors do you need on each computer
+#SBATCH --cpus-per-task=1 ## how many cpus or processors do you need on each computer
+#SBATCH --time=00:20:00 ## how long does this need to run (remember different partitions have restrictions on this param)
+#SBATCH --mem=0 ## how much RAM do you need per CPU (this effects your FairShare score so be careful to not ask for more than you need))
+#SBATCH --job-name=sample_job  ## When you run squeue -u NETID this is how you can identify the job
+#SBATCH --output=outlog_mpi_smp_2_node ## standard out and standard error goes to this file
+#SBATCH --constraint="[quest6]"
+
+module purge all
+module load namd/2.14-openmpi-4.0.5-intel-19.0.5.281 
+
+srun --mpi=pmix_v3 -n ${SLURM_NNODES} namd2 ++ppn $((${SLURM_NTASKS_PER_NODE}-1)) alanin.conf
+</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_netcdf-c">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_netcdf-c" aria-expanded="true" aria-controls="collapse_netcdf-c">
+                                 netcdf-c
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_netcdf-c" class="collapse" aria-labelledby="heading_netcdf-c" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">netcdf-c/4.7.4-openmpi-4.0.5-intel-19.0.5.281</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">netcdf-c/4.7.4-openmpi-4.0.5-intel-19.0.5.281</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> NetCDF (network Common Data Form) is a set of software libraries and machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data. This is the C distribution. <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>NetCDF (network Common Data Form) is a set of software libraries andmachine-independent data formats that support the creation, access, andsharing of array-oriented scientific data. This is the C distribution.<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_netcdf-fortran">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_netcdf-fortran" aria-expanded="true" aria-controls="collapse_netcdf-fortran">
+                                 netcdf-fortran
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_netcdf-fortran" class="collapse" aria-labelledby="heading_netcdf-fortran" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">netcdf-fortran/4.5.3-openmpi-4.0.5-intel-19.0.5.281</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">netcdf-fortran/4.5.3-openmpi-4.0.5-intel-19.0.5.281</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> NetCDF (network Common Data Form) is a set of software libraries and machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data. This is the Fortran distribution. <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>NetCDF (network Common Data Form) is a set of software libraries andmachine-independent data formats that support the creation, access, andsharing of array-oriented scientific data. This is the Fortrandistribution.<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="Chemistry">
+                         <div class="card-header" id="heading_nwchem">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_nwchem" aria-expanded="true" aria-controls="collapse_nwchem">
+                                 nwchem
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_nwchem" class="collapse" aria-labelledby="heading_nwchem" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">nwchem/6.5.0</pre>  <pre class="code">nwchem/6.6.0-patched</pre>  <pre class="code">nwchem/6.6.0</pre>  <pre class="code">nwchem/6.6.1</pre>  <pre class="code">nwchem/7.0.2-openmpi-4.0.5-intel-19.0.5.281</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">nwchem/7.0.2-openmpi-4.0.5-intel-19.0.5.281</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> High-performance computational chemistry software <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>High-performance computational chemistry software<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">#!/bin/bash
+#SBATCH --account=a9009  ## YOUR ACCOUNT pXXXX or bXXXX
+#SBATCH --partition=master  ### PARTITION (buyin, short, normal, etc)
+#SBATCH --nodes=2 ## how many computers do you need
+#SBATCH --ntasks-per-node=4 ## how many cpus or processors do you need on each computer
+#SBATCH --time=00:20:00 ## how long does this need to run (remember different partitions have restrictions on this param)
+#SBATCH --mem-per-cpu=1G ## how much RAM do you need per CPU (this effects your FairShare score so be careful to not ask for more than you need))
+#SBATCH --job-name=sample_job  ## When you run squeue -u NETID this is how you can identify the job
+#SBATCH --output=outlog_nwchem_7_0_2_intel ## standard out and standard error goes to this file
+#SBATCH --constraint="[quest5|quest6|quest8|quest9|quest10]"
+
+module purge all
+module load nwchem/7.0.2-openmpi-4.0.5-intel-19.0.5.281 
+
+mpirun -np ${SLURM_NTASKS} nwchem nwch.nw
+#srun --mpi=pmix_v3 -n ${SLURM_NTASKS} nwchem nwch.nw
+</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_openblas">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_openblas" aria-expanded="true" aria-controls="collapse_openblas">
+                                 openblas
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_openblas" class="collapse" aria-labelledby="heading_openblas" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">openblas/0.3.10-intel-19.0.5.281</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">openblas/0.3.10-intel-19.0.5.281</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> OpenBLAS<p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>OpenBLAS: An optimized BLAS library<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_opera">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_opera" aria-expanded="true" aria-controls="collapse_opera">
+                                 opera
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_opera" class="collapse" aria-labelledby="heading_opera" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">opera/12.16</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">opera/12.16</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> Sets up Opera 12.16 in your environment <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>This module adds Opera 12.16 to your path<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_orca">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_orca" aria-expanded="true" aria-controls="collapse_orca">
+                                 orca
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_orca" class="collapse" aria-labelledby="heading_orca" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">orca/4.0.1.2</pre>  <pre class="code">orca/4.1.0</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">orca/4.1.0</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> This module adds orca/4.1.0  <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>This module adds orca/4.1.0<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_paraview">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_paraview" aria-expanded="true" aria-controls="collapse_paraview">
+                                 paraview
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_paraview" class="collapse" aria-labelledby="heading_paraview" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">paraview/3.98-openmpi</pre>  <pre class="code">paraview/3.98</pre>  <pre class="code">paraview/4.4</pre>  <pre class="code">paraview/5.9.0</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">paraview/5.9.0</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> Name<p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>This module adds paraview/5.8.1<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">#!/bin/bash
+#SBATCH --account=w10001  ## YOUR ACCOUNT pXXXX or bXXXX
+#SBATCH --partition=w10001  ### PARTITION (buyin, short, normal, etc)
+#SBATCH --nodes=2 ## how many computers do you need
+#SBATCH --ntasks-per-node=4 ## how many cpus or processors do you need on each computer
+#SBATCH --time=00:10:00 ## how long does this need to run (remember different partitions have restrictions on this param)
+#SBATCH --mem-per-cpu=1G ## how much RAM do you need per CPU (this effects your FairShare score so be careful to not ask for more than you need))
+#SBATCH --job-name=sample_job  ## When you run squeue -u NETID this is how you can identify the job
+#SBATCH --output=outlog ## standard out and standard error goes to this file
+#SBATCH --mail-type=ALL ## you can receive e-mail alerts from SLURM when your job begins and when your job finishes (completed, failed, etc)
+#SBATCH --mail-user=email@u.northwestern.edu ## your email
+#SBATCH --constraint="[quest5|quest6|quest8|quest9|quest10]" ### you want computers you have requested to be from either quest5 or quest6/7 or quest8 or quest 9 nodes, not a combination of nodes. Import for MPI, not usually import for job arrays)
+
+# Let the user know what's happening
+echo "Launching ParaView 5.8.0 with command: " "$@"
+echo "Slurm nodelist: "$SLURM_NODELIST
+
+# Load pv module
+echo "Loading modules..."
+module purge all
+module load paraview/5.8.0
+
+# Create the nodelist to pass to MPI for Singularity
+echo "Preparing nodelist..."
+node_list=$(scontrol show hostname ${SLURM_NODELIST} | sort -u)
+
+mp_host_list=""
+for host in ${node_list}; do
+  mp_host_list="${mp_host_list}$host,"
+done
+
+mp_host_list=$(echo ${mp_host_list} | sed -e "s/,$//")
+
+# Launch!
+echo "Launching..."
+mpiexec -hosts $mp_host_list -np ${SLURM_NTASKS} singularity exec -B /projects:/projects /software/paraview/5.8.0-singularity/paraview_pv-v5.8.0-osmesa-py3.sif /opt/paraview/bin/"$@"
+</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_proj">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_proj" aria-expanded="true" aria-controls="collapse_proj">
+                                 proj
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_proj" class="collapse" aria-labelledby="heading_proj" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">proj/6.0.0</pre>  <pre class="code">proj/6.2.1</pre>  <pre class="code">proj/7.1.1</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">proj/7.1.1</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> This module adds proj/7.1.1  <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>This module adds proj/7.1.1 <p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_python">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_python" aria-expanded="true" aria-controls="collapse_python">
+                                 python
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_python" class="collapse" aria-labelledby="heading_python" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">python/ActivePython-2.7</pre>  <pre class="code">python/ActivePython-3.2</pre>  <pre class="code">python/anaconda</pre>  <pre class="code">python/anaconda3</pre>  <pre class="code">python/anaconda3.6</pre>  <pre class="code">python/Canopy</pre>  <pre class="code">python/epd-7.3-2</pre>  <pre class="code">python/2.7.5</pre>  <pre class="code">python/3.7.4-intel-19.0.5.281</pre>  <pre class="code">python/3.8.4</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">python/3.8.4</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> This module adds python/3.8.4, the Python Version 3 Distribution <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>This module adds python/3.8.4,   Python 3.8.4 ... Documentation: https://docs.python.org/2/index.html ... <p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_python-anaconda3">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_python-anaconda3" aria-expanded="true" aria-controls="collapse_python-anaconda3">
+                                 python-anaconda3
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_python-anaconda3" class="collapse" aria-labelledby="heading_python-anaconda3" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">python-anaconda3/2018.12</pre>  <pre class="code">python-anaconda3/2019.10</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">python-anaconda3/2019.10</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p><p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>This module adds [ module-info name ], the Anaconda Python Version 3.7 Distribution&lt;ProgramName&gt;&lt;UtilityName&gt;<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_qchem">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_qchem" aria-expanded="true" aria-controls="collapse_qchem">
+                                 qchem
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_qchem" class="collapse" aria-labelledby="heading_qchem" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">qchem/4.0</pre>  <pre class="code">qchem/4.1.2</pre>  <pre class="code">qchem/4.3</pre>  <pre class="code">qchem/4.4</pre>  <pre class="code">qchem/5.0</pre>  <pre class="code">qchem/5.2</pre>  <pre class="code">qchem/5.3</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">qchem/5.3</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> This version uses MPICH <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>	 Adds the path for QChem 5.3<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_qt">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_qt" aria-expanded="true" aria-controls="collapse_qt">
+                                 qt
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_qt" class="collapse" aria-labelledby="heading_qt" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">qt/4.6.2</pre>  <pre class="code">qt/4.8.4</pre>  <pre class="code">qt/5.0.0</pre>  <pre class="code">qt/5.3.0</pre>  <pre class="code">qt/5.9.1</pre>  <pre class="code">qt/5.10.1</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">qt/5.10.1</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> This module adds qt/5.10.1  <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>This module adds qt/5.10.1<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="Chemistry">
+                         <div class="card-header" id="heading_quantum-espresso">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_quantum-espresso" aria-expanded="true" aria-controls="collapse_quantum-espresso">
+                                 quantum-espresso
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_quantum-espresso" class="collapse" aria-labelledby="heading_quantum-espresso" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">quantum-espresso/6.7-openmpi-4.0.5-intel-19.0.5.281</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">quantum-espresso/6.7-openmpi-4.0.5-intel-19.0.5.281</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> Quantum ESPRESSO is an integrated suite of Open-Source computer codes for electronic-structure calculations and materials modeling at the nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials.  <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>Quantum ESPRESSO is an integrated suite of Open-Source computer codesfor electronic-structure calculations and materials modeling at thenanoscale. It is based on density-functional theory, plane waves, andpseudopotentials.<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">#!/bin/bash
+#SBATCH --account=a9009  ## YOUR ACCOUNT pXXXX or bXXXX
+#SBATCH --partition=master  ### PARTITION (buyin, short, normal, etc)
+#SBATCH --nodes=2 ## how many computers do you need
+#SBATCH --ntasks-per-node=4 ## how many cpus or processors do you need on each computer
+#SBATCH --time=00:20:00 ## how long does this need to run (remember different partitions have restrictions on this param)
+#SBATCH --mem-per-cpu=3G ## how much RAM do you need per CPU (this effects your FairShare score so be careful to not ask for more than you need))
+#SBATCH --job-name=sample_job  ## When you run squeue -u NETID this is how you can identify the job
+#SBATCH --output=outlog_qe_6.7_intel ## standard out and standard error goes to this file
+#SBATCH --constraint="[quest5|quest6|quest8|quest9|quest10]"
+
+module purge all
+module load quantum-espresso/6.7-openmpi-4.0.5-intel-19.0.5.281
+
+mpirun -np $SLURM_NTASKS pw.x < ./qe.in > ./qe.out
+#srun --mpi=pmix_v3 -n ${SLURM_NTASKS} pw.x < ./qe.in > ./qe.out
+</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_scalapack">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_scalapack" aria-expanded="true" aria-controls="collapse_scalapack">
+                                 scalapack
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_scalapack" class="collapse" aria-labelledby="heading_scalapack" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">scalapack/2.0.2_gcc</pre>  <pre class="code">scalapack/2.0.2_gcc483</pre>  <pre class="code">scalapack/2.0.2_intel</pre>  <pre class="code">scalapack/2.0.2</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">scalapack/2.0.2</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> This module adds Scalapack 2.0.2 library to your path  <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>This module adds Scalapack to your path<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_singularity">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_singularity" aria-expanded="true" aria-controls="collapse_singularity">
+                                 singularity
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_singularity" class="collapse" aria-labelledby="heading_singularity" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">singularity/default</pre>  <pre class="code">singularity/latest</pre>  <pre class="code">singularity/3.6.2</pre>  <pre class="code">singularity/3.7.0</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">singularity/3.7.0</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> Sets up Singularity in your environment <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>This module adds Singularity to your path<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_sratoolkit">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_sratoolkit" aria-expanded="true" aria-controls="collapse_sratoolkit">
+                                 sratoolkit
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_sratoolkit" class="collapse" aria-labelledby="heading_sratoolkit" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">sratoolkit/2.8.0</pre>  <pre class="code">sratoolkit/2.8.1</pre>  <pre class="code">sratoolkit/2.9.2</pre>  <pre class="code">sratoolkit/2.10.5</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">sratoolkit/2.10.5</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> This module adds sratoolkit/2.10.5  <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>This module adds sratoolkit/2.10.5<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_stat">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_stat" aria-expanded="true" aria-controls="collapse_stat">
+                                 stat
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_stat" class="collapse" aria-labelledby="heading_stat" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">stat/4.0.1</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">stat/4.0.1</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> This module adds stat/4.0.1 <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>This module adds stat/4.0.1 to various paths<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_stata">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_stata" aria-expanded="true" aria-controls="collapse_stata">
+                                 stata
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_stata" class="collapse" aria-labelledby="heading_stata" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">stata/14-b1041</pre>  <pre class="code">stata/14</pre>  <pre class="code">stata/15</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">stata/15</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> This module adds stata/15 to your environment <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>This module adds stata/15 to your environment<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_stattransfer">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_stattransfer" aria-expanded="true" aria-controls="collapse_stattransfer">
+                                 stattransfer
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_stattransfer" class="collapse" aria-labelledby="heading_stattransfer" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">stattransfer/13</pre>  <pre class="code">stattransfer/14</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">stattransfer/14</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> This module adds stattransfer/14 <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>This module adds stattransfer/14 to various paths<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_tcl">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_tcl" aria-expanded="true" aria-controls="collapse_tcl">
+                                 tcl
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_tcl" class="collapse" aria-labelledby="heading_tcl" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">tcl/8.6.11-intel-19.0.5.281</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">tcl/8.6.11-intel-19.0.5.281</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> Tcl (Tool Command Language) is a very powerful but easy to learn dynamic programming language, suitable for a very wide range of uses, including web and desktop applications, networking, administration, testing and many more. Open source and business-friendly, Tcl is a mature yet evolving language that is truly cross platform, easily deployed and highly extensible. <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>Tcl (Tool Command Language) is a very powerful but easy to learn dynamicprogramming language, suitable for a very wide range of uses, includingweb and desktop applications, networking, administration, testing andmany more. Open source and business-friendly, Tcl is a mature yetevolving language that is truly cross platform, easily deployed andhighly extensible.<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_texlive">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_texlive" aria-expanded="true" aria-controls="collapse_texlive">
+                                 texlive
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_texlive" class="collapse" aria-labelledby="heading_texlive" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">texlive/2012</pre>  <pre class="code">texlive/2014</pre>  <pre class="code">texlive/2015</pre>  <pre class="code">texlive/2020</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">texlive/2020</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> Sets up TEXLive 2020 in your environment <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>This module adds TEXLive 2020 to your path<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_vasp">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_vasp" aria-expanded="true" aria-controls="collapse_vasp">
+                                 vasp
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_vasp" class="collapse" aria-labelledby="heading_vasp" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions:  <pre class="code">vasp/4.6.38</pre>  <pre class="code">vasp/5.3</pre>  <pre class="code">vasp/5.3.3.vtst</pre>  <pre class="code">vasp/5.3.3</pre>  <pre class="code">vasp/5.3.5.vtst.beef</pre>  <pre class="code">vasp/5.3.5</pre>  <pre class="code">vasp/5.4.1_intel_ompi</pre>  <pre class="code">vasp/5.4.1_vtst</pre>  <pre class="code">vasp/5.4.1</pre>  <pre class="code">vasp/5.4.4_gcc_ompi</pre>  <pre class="code">vasp/5.4.4-openmpi-4.0.5-intel-19.0.5.281</pre>  <pre class="code">vasp/5.4.4-vtst-openmpi-4.0.5-intel-19.0.5.281</pre>  <pre class="code">vasp/5.4.4</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">vasp/5.4.4</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> This module adds vasp/5.4.4  <p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>This module adds vasp/5.4.4<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_mercurial">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_mercurial" aria-expanded="true" aria-controls="collapse_mercurial">
+                                 mercurial
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_mercurial" class="collapse" aria-labelledby="heading_mercurial" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions: 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">None</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p>None<p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>None<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card" id="">
+                         <div class="card-header" id="heading_gnuplot">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_gnuplot" aria-expanded="true" aria-controls="collapse_gnuplot">
+                                 gnuplot
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_gnuplot" class="collapse" aria-labelledby="heading_gnuplot" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 Available Versions: 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">None</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p>None<p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>None<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+    
+$("#collapse_ADF").on('shown.bs.collapse', function() {
+    window.location = "#heading_ADF";
+});
+    
+$("#collapse_R").on('shown.bs.collapse', function() {
+    window.location = "#heading_R";
+});
+    
+$("#collapse_abaqus").on('shown.bs.collapse', function() {
+    window.location = "#heading_abaqus";
+});
+    
+$("#collapse_abinit").on('shown.bs.collapse', function() {
+    window.location = "#heading_abinit";
+});
+    
+$("#collapse_ansys").on('shown.bs.collapse', function() {
+    window.location = "#heading_ansys";
+});
+    
+$("#collapse_aspera").on('shown.bs.collapse', function() {
+    window.location = "#heading_aspera";
+});
+    
+$("#collapse_blas-lapack").on('shown.bs.collapse', function() {
+    window.location = "#heading_blas-lapack";
+});
+    
+$("#collapse_boost").on('shown.bs.collapse', function() {
+    window.location = "#heading_boost";
+});
+    
+$("#collapse_charmpp").on('shown.bs.collapse', function() {
+    window.location = "#heading_charmpp";
+});
+    
+$("#collapse_cmake").on('shown.bs.collapse', function() {
+    window.location = "#heading_cmake";
+});
+    
+$("#collapse_cuda").on('shown.bs.collapse', function() {
+    window.location = "#heading_cuda";
+});
+    
+$("#collapse_fftw").on('shown.bs.collapse', function() {
+    window.location = "#heading_fftw";
+});
+    
+$("#collapse_firefox").on('shown.bs.collapse', function() {
+    window.location = "#heading_firefox";
+});
+    
+$("#collapse_freesurfer").on('shown.bs.collapse', function() {
+    window.location = "#heading_freesurfer";
+});
+    
+$("#collapse_fsl").on('shown.bs.collapse', function() {
+    window.location = "#heading_fsl";
+});
+    
+$("#collapse_gatk").on('shown.bs.collapse', function() {
+    window.location = "#heading_gatk";
+});
+    
+$("#collapse_gauss").on('shown.bs.collapse', function() {
+    window.location = "#heading_gauss";
+});
+    
+$("#collapse_gcc").on('shown.bs.collapse', function() {
+    window.location = "#heading_gcc";
+});
+    
+$("#collapse_gdal").on('shown.bs.collapse', function() {
+    window.location = "#heading_gdal";
+});
+    
+$("#collapse_geos").on('shown.bs.collapse', function() {
+    window.location = "#heading_geos";
+});
+    
+$("#collapse_git").on('shown.bs.collapse', function() {
+    window.location = "#heading_git";
+});
+    
+$("#collapse_gromacs").on('shown.bs.collapse', function() {
+    window.location = "#heading_gromacs";
+});
+    
+$("#collapse_gsl").on('shown.bs.collapse', function() {
+    window.location = "#heading_gsl";
+});
+    
+$("#collapse_gurobi").on('shown.bs.collapse', function() {
+    window.location = "#heading_gurobi";
+});
+    
+$("#collapse_hdf5").on('shown.bs.collapse', function() {
+    window.location = "#heading_hdf5";
+});
+    
+$("#collapse_intel").on('shown.bs.collapse', function() {
+    window.location = "#heading_intel";
+});
+    
+$("#collapse_java").on('shown.bs.collapse', function() {
+    window.location = "#heading_java";
+});
+    
+$("#collapse_julia").on('shown.bs.collapse', function() {
+    window.location = "#heading_julia";
+});
+    
+$("#collapse_knitro").on('shown.bs.collapse', function() {
+    window.location = "#heading_knitro";
+});
+    
+$("#collapse_lammps").on('shown.bs.collapse', function() {
+    window.location = "#heading_lammps";
+});
+    
+$("#collapse_latte").on('shown.bs.collapse', function() {
+    window.location = "#heading_latte";
+});
+    
+$("#collapse_lumerical").on('shown.bs.collapse', function() {
+    window.location = "#heading_lumerical";
+});
+    
+$("#collapse_mathematica").on('shown.bs.collapse', function() {
+    window.location = "#heading_mathematica";
+});
+    
+$("#collapse_matlab").on('shown.bs.collapse', function() {
+    window.location = "#heading_matlab";
+});
+    
+$("#collapse_mpi").on('shown.bs.collapse', function() {
+    window.location = "#heading_mpi";
+});
+    
+$("#collapse_namd").on('shown.bs.collapse', function() {
+    window.location = "#heading_namd";
+});
+    
+$("#collapse_netcdf-c").on('shown.bs.collapse', function() {
+    window.location = "#heading_netcdf-c";
+});
+    
+$("#collapse_netcdf-fortran").on('shown.bs.collapse', function() {
+    window.location = "#heading_netcdf-fortran";
+});
+    
+$("#collapse_nwchem").on('shown.bs.collapse', function() {
+    window.location = "#heading_nwchem";
+});
+    
+$("#collapse_openblas").on('shown.bs.collapse', function() {
+    window.location = "#heading_openblas";
+});
+    
+$("#collapse_opera").on('shown.bs.collapse', function() {
+    window.location = "#heading_opera";
+});
+    
+$("#collapse_orca").on('shown.bs.collapse', function() {
+    window.location = "#heading_orca";
+});
+    
+$("#collapse_paraview").on('shown.bs.collapse', function() {
+    window.location = "#heading_paraview";
+});
+    
+$("#collapse_proj").on('shown.bs.collapse', function() {
+    window.location = "#heading_proj";
+});
+    
+$("#collapse_python").on('shown.bs.collapse', function() {
+    window.location = "#heading_python";
+});
+    
+$("#collapse_python-anaconda3").on('shown.bs.collapse', function() {
+    window.location = "#heading_python-anaconda3";
+});
+    
+$("#collapse_qchem").on('shown.bs.collapse', function() {
+    window.location = "#heading_qchem";
+});
+    
+$("#collapse_qt").on('shown.bs.collapse', function() {
+    window.location = "#heading_qt";
+});
+    
+$("#collapse_quantum-espresso").on('shown.bs.collapse', function() {
+    window.location = "#heading_quantum-espresso";
+});
+    
+$("#collapse_scalapack").on('shown.bs.collapse', function() {
+    window.location = "#heading_scalapack";
+});
+    
+$("#collapse_singularity").on('shown.bs.collapse', function() {
+    window.location = "#heading_singularity";
+});
+    
+$("#collapse_sratoolkit").on('shown.bs.collapse', function() {
+    window.location = "#heading_sratoolkit";
+});
+    
+$("#collapse_stat").on('shown.bs.collapse', function() {
+    window.location = "#heading_stat";
+});
+    
+$("#collapse_stata").on('shown.bs.collapse', function() {
+    window.location = "#heading_stata";
+});
+    
+$("#collapse_stattransfer").on('shown.bs.collapse', function() {
+    window.location = "#heading_stattransfer";
+});
+    
+$("#collapse_tcl").on('shown.bs.collapse', function() {
+    window.location = "#heading_tcl";
+});
+    
+$("#collapse_texlive").on('shown.bs.collapse', function() {
+    window.location = "#heading_texlive";
+});
+    
+$("#collapse_vasp").on('shown.bs.collapse', function() {
+    window.location = "#heading_vasp";
+});
+    
+$("#collapse_mercurial").on('shown.bs.collapse', function() {
+    window.location = "#heading_mercurial";
+});
+    
+$("#collapse_gnuplot").on('shown.bs.collapse', function() {
+    window.location = "#heading_gnuplot";
+});
+    
+});
+</script>
+
+<script type="text/javascript">
+function toggler(divId) {
+    let a = `[class="card"][id!=${divId}]`
+    $(a).each(function( index ) {
+        $( this ).toggle();
+});
+}
+</script>
+
+
+    </main>
+
+  </body>
+
+</html>
