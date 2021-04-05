@@ -79,8 +79,11 @@ class Command(BaseCommand):
                 # We need to get the versions in a  different way if there are lots of them because the above method will ellipsis
                 if len(versions) > 2:
                     result = subprocess.run(["/software/lmod/lmod/libexec/lmod", "spider", "{0}/".format(name)], stdout=subprocess.PIPE, stdin = subprocess.PIPE, stderr = subprocess.PIPE)
-                    versions = result.stderr.decode("utf-8").split("Versions:\n")[-1].split("\n\n")[0].replace(" ", "").split("\n")
+                    versions = result.stderr.decode("utf-8").split("Versions:\n")[1].split("\n\n")[0].replace(" ", "").split("\n")
+                    print(versions)
                 obj, created = Module.objects.get_or_create(name=name,)
+                obj.keywords = None
+                obj.save()
                 obj.versions = versions
                 obj.preferred = versions[-1]
                 whatis_output = subprocess.run(["/software/lmod/lmod/libexec/lmod", "whatis", versions[-1]], stdout=subprocess.PIPE, stdin = subprocess.PIPE, stderr = subprocess.PIPE)

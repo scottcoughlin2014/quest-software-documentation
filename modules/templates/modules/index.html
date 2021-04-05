@@ -17,16 +17,10 @@
 
 <a href="#" onclick="toggler('Chemistry');">Chemistry</a>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="navbar-nav flex-row">
-        <ul class="navbar-nav mr-auto">
+<nav class="navbar navbar-light bg-light mr-auto">
 {% for module in modules %}
-            <li class="nav-item">
-                <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_{{module.name}}" role="tab" aria-controls="collapse_{{module.name}}">{{module.name}}</a>
-            </li>
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_{{module.name}}" role="tab" aria-controls="collapse_{{module.name}}">{{module.name}}</a>
 {% endfor %}
-      </ul>
-    </div>
 </nav>
 </p>
 </ul>
@@ -82,7 +76,10 @@ $("#collapse_{{module.name}}").on('shown.bs.collapse', function() {
 
 <script type="text/javascript">
 function toggler(divId) {
-    $("#" + divId).toggle();
+    let a = `[class="card"][id!=${divId}]`
+    $(a).each(function( index ) {
+        $( this ).toggle();
+});
 }
 </script>
 
