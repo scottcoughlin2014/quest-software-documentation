@@ -15,8 +15,10 @@
  </strong>
 </p>
 
-<a href="#" onclick="toggler('Chemistry');">Chemistry</a>
-
+<a href="#" onclick="togglerall();">Show All</a>
+{% for kw in all_keywords %}
+    <a href="#" onclick="toggler('{{kw}}');">{{kw}}</a>
+{% endfor %}
 <nav class="navbar navbar-light bg-light mr-auto">
 {% for module in modules %}
     <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_{{module.name}}" role="tab" aria-controls="collapse_{{module.name}}">{{module.name}}</a>
@@ -31,7 +33,7 @@
         <div class="col-sm-9">
             <div class="accordion" id="accordionExample">
                 {% for module in modules %}
-                    <div class="card" id="{% for keyword in module.keywords %}{{keyword|safe}}{% endfor %}">
+                    <div class="card {% for keyword in module.keywords %}{{keyword|safe}} {% endfor %}">
                          <div class="card-header" id="heading_{{module.name}}">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_{{module.name}}" aria-expanded="true" aria-controls="collapse_{{module.name}}">
@@ -76,10 +78,22 @@ $("#collapse_{{module.name}}").on('shown.bs.collapse', function() {
 
 <script type="text/javascript">
 function toggler(divId) {
-    let a = `[class="card"][id!=${divId}]`
-    $(a).each(function( index ) {
-        $( this ).toggle();
-});
+    $("div.card").each(function( index ) {
+        if(!($(this).attr("class").split(" ").includes(divId))){
+            if ($( this ).is( ":visible" )){$(this).toggle();};
+        }
+        else{ 
+            if ($( this ).is( ":hidden" )){$(this).toggle();};
+        }
+    });
+}
+</script>
+
+<script type="text/javascript">
+function togglerall() {
+    $("div.card").each(function( index ) {
+        if ($( this ).is( ":hidden" )){$(this).toggle();};
+    });
 }
 </script>
 

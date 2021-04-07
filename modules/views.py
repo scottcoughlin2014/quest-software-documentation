@@ -6,7 +6,14 @@ MODULES_TO_DISPLAY = [""]
 
 def index(request):
     modules = Module.objects.all()
-    return render(request, 'modules/index.html', {"modules" : modules})
+    all_keywords = []
+    for module in modules:
+        if module.keywords is not None:
+            for keyword in module.keywords:
+                all_keywords.append(keyword)
+    all_keywords = set(all_keywords)
+    
+    return render(request, 'modules/index.html', {"modules" : modules, "all_keywords" : all_keywords})
 
 #def detail(request, module_id):
 #    module = get_object_or_404(Module, pk=module_id)

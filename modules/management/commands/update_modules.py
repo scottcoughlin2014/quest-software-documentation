@@ -97,12 +97,11 @@ class Command(BaseCommand):
                     for i in whatis_output:
                         for ii in i:
                             if "Keywords" in ii:
-                                keywords = [tmp.replace(" ", "") for tmp in ii.split(";")[1:]]
+                                keywords = [tmp.replace(" ", "").split(",") for tmp in ii.split(";")[1:]][0]
                                 obj.keywords = keywords
 
-                if obj.help_info is None:
-                    result = subprocess.run(["/software/lmod/lmod/libexec/lmod", "help", versions[-1]], stdout=subprocess.PIPE, stdin = subprocess.PIPE, stderr = subprocess.PIPE)
-                    obj.help_info = ''.join(result.stderr.decode("utf-8").split("\n")[2:])
+                result = subprocess.run(["/software/lmod/lmod/libexec/lmod", "help", versions[-1]], stdout=subprocess.PIPE, stdin = subprocess.PIPE, stderr = subprocess.PIPE)
+                obj.help_info = ''.join(result.stderr.decode("utf-8").split("\n")[2:])
                 if name in os.listdir("examplejobs"):
                     try:
                         submit_script = glob.glob(os.path.join("examplejobs", name, "*.sh"))[0]
