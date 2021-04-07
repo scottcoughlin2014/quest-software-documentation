@@ -32,7 +32,11 @@
  </strong>
 </p>
 
-<a href="#" onclick="toggler('Chemistry');">Chemistry</a>
+<a href="#" onclick="togglerall();">Show All</a>
+
+    <a href="#" onclick="toggler('simulation');">simulation</a>
+
+    <a href="#" onclick="toggler('Chemistry');">Chemistry</a>
 
 <nav class="navbar navbar-light bg-light mr-auto">
 
@@ -166,7 +170,7 @@
         <div class="col-sm-9">
             <div class="accordion" id="accordionExample">
                 
-                    <div class="card" id="Chemistry">
+                    <div class="card Chemistry ">
                          <div class="card-header" id="heading_ADF">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_ADF" aria-expanded="true" aria-controls="collapse_ADF">
@@ -193,7 +197,7 @@
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_R">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_R" aria-expanded="true" aria-controls="collapse_R">
@@ -220,7 +224,7 @@
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_abaqus">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_abaqus" aria-expanded="true" aria-controls="collapse_abaqus">
@@ -247,7 +251,7 @@
                          </div>
                     </div>
                 
-                    <div class="card" id="Chemistry">
+                    <div class="card Chemistry simulation ">
                          <div class="card-header" id="heading_abinit">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_abinit" aria-expanded="true" aria-controls="collapse_abinit">
@@ -291,7 +295,7 @@ mpirun -np $SLURM_NTASKS abinit <tbase1_x.files> log.stdout
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_ansys">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_ansys" aria-expanded="true" aria-controls="collapse_ansys">
@@ -318,7 +322,7 @@ mpirun -np $SLURM_NTASKS abinit <tbase1_x.files> log.stdout
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_aspera">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_aspera" aria-expanded="true" aria-controls="collapse_aspera">
@@ -345,7 +349,7 @@ mpirun -np $SLURM_NTASKS abinit <tbase1_x.files> log.stdout
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_blas-lapack">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_blas-lapack" aria-expanded="true" aria-controls="collapse_blas-lapack">
@@ -372,7 +376,7 @@ mpirun -np $SLURM_NTASKS abinit <tbase1_x.files> log.stdout
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_boost">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_boost" aria-expanded="true" aria-controls="collapse_boost">
@@ -399,7 +403,7 @@ mpirun -np $SLURM_NTASKS abinit <tbase1_x.files> log.stdout
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_charmpp">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_charmpp" aria-expanded="true" aria-controls="collapse_charmpp">
@@ -426,7 +430,7 @@ mpirun -np $SLURM_NTASKS abinit <tbase1_x.files> log.stdout
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_cmake">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_cmake" aria-expanded="true" aria-controls="collapse_cmake">
@@ -453,7 +457,7 @@ mpirun -np $SLURM_NTASKS abinit <tbase1_x.files> log.stdout
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_cuda">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_cuda" aria-expanded="true" aria-controls="collapse_cuda">
@@ -480,7 +484,7 @@ mpirun -np $SLURM_NTASKS abinit <tbase1_x.files> log.stdout
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_fftw">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_fftw" aria-expanded="true" aria-controls="collapse_fftw">
@@ -507,7 +511,7 @@ mpirun -np $SLURM_NTASKS abinit <tbase1_x.files> log.stdout
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_firefox">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_firefox" aria-expanded="true" aria-controls="collapse_firefox">
@@ -534,7 +538,7 @@ mpirun -np $SLURM_NTASKS abinit <tbase1_x.files> log.stdout
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_freesurfer">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_freesurfer" aria-expanded="true" aria-controls="collapse_freesurfer">
@@ -561,7 +565,7 @@ mpirun -np $SLURM_NTASKS abinit <tbase1_x.files> log.stdout
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_fsl">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_fsl" aria-expanded="true" aria-controls="collapse_fsl">
@@ -588,7 +592,7 @@ mpirun -np $SLURM_NTASKS abinit <tbase1_x.files> log.stdout
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_gatk">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_gatk" aria-expanded="true" aria-controls="collapse_gatk">
@@ -615,7 +619,7 @@ mpirun -np $SLURM_NTASKS abinit <tbase1_x.files> log.stdout
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_gauss">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_gauss" aria-expanded="true" aria-controls="collapse_gauss">
@@ -642,7 +646,7 @@ mpirun -np $SLURM_NTASKS abinit <tbase1_x.files> log.stdout
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_gcc">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_gcc" aria-expanded="true" aria-controls="collapse_gcc">
@@ -669,7 +673,7 @@ mpirun -np $SLURM_NTASKS abinit <tbase1_x.files> log.stdout
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_gdal">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_gdal" aria-expanded="true" aria-controls="collapse_gdal">
@@ -696,7 +700,7 @@ mpirun -np $SLURM_NTASKS abinit <tbase1_x.files> log.stdout
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_geos">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_geos" aria-expanded="true" aria-controls="collapse_geos">
@@ -723,7 +727,7 @@ mpirun -np $SLURM_NTASKS abinit <tbase1_x.files> log.stdout
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_git">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_git" aria-expanded="true" aria-controls="collapse_git">
@@ -750,7 +754,7 @@ mpirun -np $SLURM_NTASKS abinit <tbase1_x.files> log.stdout
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_gromacs">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_gromacs" aria-expanded="true" aria-controls="collapse_gromacs">
@@ -777,7 +781,7 @@ mpirun -np $SLURM_NTASKS abinit <tbase1_x.files> log.stdout
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_gsl">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_gsl" aria-expanded="true" aria-controls="collapse_gsl">
@@ -804,7 +808,7 @@ mpirun -np $SLURM_NTASKS abinit <tbase1_x.files> log.stdout
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_gurobi">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_gurobi" aria-expanded="true" aria-controls="collapse_gurobi">
@@ -831,7 +835,7 @@ mpirun -np $SLURM_NTASKS abinit <tbase1_x.files> log.stdout
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_hdf5">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_hdf5" aria-expanded="true" aria-controls="collapse_hdf5">
@@ -858,7 +862,7 @@ mpirun -np $SLURM_NTASKS abinit <tbase1_x.files> log.stdout
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_intel">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_intel" aria-expanded="true" aria-controls="collapse_intel">
@@ -885,7 +889,7 @@ mpirun -np $SLURM_NTASKS abinit <tbase1_x.files> log.stdout
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_java">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_java" aria-expanded="true" aria-controls="collapse_java">
@@ -912,7 +916,7 @@ mpirun -np $SLURM_NTASKS abinit <tbase1_x.files> log.stdout
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_julia">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_julia" aria-expanded="true" aria-controls="collapse_julia">
@@ -939,7 +943,7 @@ mpirun -np $SLURM_NTASKS abinit <tbase1_x.files> log.stdout
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_knitro">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_knitro" aria-expanded="true" aria-controls="collapse_knitro">
@@ -966,7 +970,7 @@ mpirun -np $SLURM_NTASKS abinit <tbase1_x.files> log.stdout
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_lammps">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_lammps" aria-expanded="true" aria-controls="collapse_lammps">
@@ -1010,7 +1014,7 @@ mpirun -np ${SLURM_NTASKS} lmp -in in.lj
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_latte">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_latte" aria-expanded="true" aria-controls="collapse_latte">
@@ -1037,7 +1041,7 @@ mpirun -np ${SLURM_NTASKS} lmp -in in.lj
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_lumerical">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_lumerical" aria-expanded="true" aria-controls="collapse_lumerical">
@@ -1064,7 +1068,7 @@ mpirun -np ${SLURM_NTASKS} lmp -in in.lj
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_mathematica">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_mathematica" aria-expanded="true" aria-controls="collapse_mathematica">
@@ -1091,7 +1095,7 @@ mpirun -np ${SLURM_NTASKS} lmp -in in.lj
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_matlab">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_matlab" aria-expanded="true" aria-controls="collapse_matlab">
@@ -1118,7 +1122,7 @@ mpirun -np ${SLURM_NTASKS} lmp -in in.lj
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_mpi">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_mpi" aria-expanded="true" aria-controls="collapse_mpi">
@@ -1145,7 +1149,7 @@ mpirun -np ${SLURM_NTASKS} lmp -in in.lj
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_namd">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_namd" aria-expanded="true" aria-controls="collapse_namd">
@@ -1190,7 +1194,7 @@ srun -n ${SLURM_NNODES} namd2 ++ppn $((${SLURM_NTASKS_PER_NODE}-1)) alanin.conf
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_netcdf-c">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_netcdf-c" aria-expanded="true" aria-controls="collapse_netcdf-c">
@@ -1217,7 +1221,7 @@ srun -n ${SLURM_NNODES} namd2 ++ppn $((${SLURM_NTASKS_PER_NODE}-1)) alanin.conf
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_netcdf-fortran">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_netcdf-fortran" aria-expanded="true" aria-controls="collapse_netcdf-fortran">
@@ -1244,7 +1248,7 @@ srun -n ${SLURM_NNODES} namd2 ++ppn $((${SLURM_NTASKS_PER_NODE}-1)) alanin.conf
                          </div>
                     </div>
                 
-                    <div class="card" id="Chemistry">
+                    <div class="card Chemistry ">
                          <div class="card-header" id="heading_nwchem">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_nwchem" aria-expanded="true" aria-controls="collapse_nwchem">
@@ -1287,7 +1291,7 @@ mpirun -np ${SLURM_NTASKS} nwchem nwch.nw
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_openblas">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_openblas" aria-expanded="true" aria-controls="collapse_openblas">
@@ -1314,7 +1318,7 @@ mpirun -np ${SLURM_NTASKS} nwchem nwch.nw
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_opera">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_opera" aria-expanded="true" aria-controls="collapse_opera">
@@ -1341,7 +1345,7 @@ mpirun -np ${SLURM_NTASKS} nwchem nwch.nw
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_orca">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_orca" aria-expanded="true" aria-controls="collapse_orca">
@@ -1368,7 +1372,7 @@ mpirun -np ${SLURM_NTASKS} nwchem nwch.nw
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_paraview">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_paraview" aria-expanded="true" aria-controls="collapse_paraview">
@@ -1431,7 +1435,7 @@ mpiexec -hosts $mp_host_list -np ${SLURM_NTASKS} singularity exec -B /projects:/
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_proj">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_proj" aria-expanded="true" aria-controls="collapse_proj">
@@ -1458,7 +1462,7 @@ mpiexec -hosts $mp_host_list -np ${SLURM_NTASKS} singularity exec -B /projects:/
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_python">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_python" aria-expanded="true" aria-controls="collapse_python">
@@ -1485,7 +1489,7 @@ mpiexec -hosts $mp_host_list -np ${SLURM_NTASKS} singularity exec -B /projects:/
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_python-anaconda3">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_python-anaconda3" aria-expanded="true" aria-controls="collapse_python-anaconda3">
@@ -1512,7 +1516,7 @@ mpiexec -hosts $mp_host_list -np ${SLURM_NTASKS} singularity exec -B /projects:/
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_qchem">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_qchem" aria-expanded="true" aria-controls="collapse_qchem">
@@ -1539,7 +1543,7 @@ mpiexec -hosts $mp_host_list -np ${SLURM_NTASKS} singularity exec -B /projects:/
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_qt">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_qt" aria-expanded="true" aria-controls="collapse_qt">
@@ -1566,7 +1570,7 @@ mpiexec -hosts $mp_host_list -np ${SLURM_NTASKS} singularity exec -B /projects:/
                          </div>
                     </div>
                 
-                    <div class="card" id="Chemistry">
+                    <div class="card Chemistry ">
                          <div class="card-header" id="heading_quantum-espresso">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_quantum-espresso" aria-expanded="true" aria-controls="collapse_quantum-espresso">
@@ -1610,7 +1614,7 @@ mpirun -np $SLURM_NTASKS pw.x < ./qe.in > ./qe.out
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_scalapack">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_scalapack" aria-expanded="true" aria-controls="collapse_scalapack">
@@ -1637,7 +1641,7 @@ mpirun -np $SLURM_NTASKS pw.x < ./qe.in > ./qe.out
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_singularity">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_singularity" aria-expanded="true" aria-controls="collapse_singularity">
@@ -1664,7 +1668,7 @@ mpirun -np $SLURM_NTASKS pw.x < ./qe.in > ./qe.out
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_sratoolkit">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_sratoolkit" aria-expanded="true" aria-controls="collapse_sratoolkit">
@@ -1691,7 +1695,7 @@ mpirun -np $SLURM_NTASKS pw.x < ./qe.in > ./qe.out
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_stat">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_stat" aria-expanded="true" aria-controls="collapse_stat">
@@ -1718,7 +1722,7 @@ mpirun -np $SLURM_NTASKS pw.x < ./qe.in > ./qe.out
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_stata">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_stata" aria-expanded="true" aria-controls="collapse_stata">
@@ -1745,7 +1749,7 @@ mpirun -np $SLURM_NTASKS pw.x < ./qe.in > ./qe.out
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_stattransfer">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_stattransfer" aria-expanded="true" aria-controls="collapse_stattransfer">
@@ -1772,7 +1776,7 @@ mpirun -np $SLURM_NTASKS pw.x < ./qe.in > ./qe.out
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_tcl">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_tcl" aria-expanded="true" aria-controls="collapse_tcl">
@@ -1799,7 +1803,7 @@ mpirun -np $SLURM_NTASKS pw.x < ./qe.in > ./qe.out
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_texlive">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_texlive" aria-expanded="true" aria-controls="collapse_texlive">
@@ -1826,7 +1830,7 @@ mpirun -np $SLURM_NTASKS pw.x < ./qe.in > ./qe.out
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_vasp">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_vasp" aria-expanded="true" aria-controls="collapse_vasp">
@@ -1869,7 +1873,7 @@ mpirun -np ${SLURM_NTASKS} vasp_std
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_mercurial">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_mercurial" aria-expanded="true" aria-controls="collapse_mercurial">
@@ -1896,7 +1900,7 @@ mpirun -np ${SLURM_NTASKS} vasp_std
                          </div>
                     </div>
                 
-                    <div class="card" id="">
+                    <div class="card ">
                          <div class="card-header" id="heading_gnuplot">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_gnuplot" aria-expanded="true" aria-controls="collapse_gnuplot">
@@ -2177,10 +2181,22 @@ $("#collapse_gnuplot").on('shown.bs.collapse', function() {
 
 <script type="text/javascript">
 function toggler(divId) {
-    let a = `[class="card"][id!=${divId}]`
-    $(a).each(function( index ) {
-        $( this ).toggle();
-});
+    $("div.card").each(function( index ) {
+        if(!($(this).attr("class").split(" ").includes(divId))){
+            if ($( this ).is( ":visible" )){$(this).toggle();};
+        }
+        else{ 
+            if ($( this ).is( ":hidden" )){$(this).toggle();};
+        }
+    });
+}
+</script>
+
+<script type="text/javascript">
+function togglerall() {
+    $("div.card").each(function( index ) {
+        if ($( this ).is( ":hidden" )){$(this).toggle();};
+    });
 }
 </script>
 
