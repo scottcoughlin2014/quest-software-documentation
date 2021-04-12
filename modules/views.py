@@ -5,7 +5,7 @@ from .models import Module
 MODULES_TO_DISPLAY = [""]
 
 def index(request):
-    modules = Module.objects.all()
+    modules = Module.objects.order_by('name')
     all_keywords = []
     for module in modules:
         if module.keywords is not None:

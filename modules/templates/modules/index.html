@@ -15,17 +15,19 @@
  </strong>
 </p>
 
-<a href="#" onclick="togglerall();">Show All</a>
-{% for kw in all_keywords %}
-    <a href="#" onclick="toggler('{{kw}}');">{{kw}}</a>
-{% endfor %}
-<nav class="navbar navbar-light bg-light mr-auto">
+<nav class="navbar navbar-light bg-light justify-content-start">
+<a href="#" onclick="togglerall();">Show All</a>{% for kw in all_keywords %}<a class="nav-link justify-content-start" href="#" onclick="toggler('{{kw}}');">{{kw}}</a>{% endfor %}
+</nav>
+<br>
+<div>
+<nav class="navbar navbar-light bg-light ml-auto">
 {% for module in modules %}
     <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_{{module.name}}" role="tab" aria-controls="collapse_{{module.name}}">{{module.name}}</a>
 {% endfor %}
 </nav>
-</p>
-</ul>
+</div>
+<br>
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-1">
