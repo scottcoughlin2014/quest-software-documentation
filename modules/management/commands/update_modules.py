@@ -80,7 +80,7 @@ class Command(BaseCommand):
                 if len(versions) > 2:
                     result = subprocess.run(["/software/lmod/lmod/libexec/lmod", "spider", "{0}/".format(name)], stdout=subprocess.PIPE, stdin = subprocess.PIPE, stderr = subprocess.PIPE)
                     versions = result.stderr.decode("utf-8").split("Versions:\n")[1].split("\n\n")[0].replace(" ", "").split("\n")
-                    print(versions)
+
                 obj, created = Module.objects.get_or_create(name=name,)
                 obj.keywords = None
                 obj.save()
@@ -101,7 +101,7 @@ class Command(BaseCommand):
                                 obj.keywords = keywords
 
                 result = subprocess.run(["/software/lmod/lmod/libexec/lmod", "help", versions[-1]], stdout=subprocess.PIPE, stdin = subprocess.PIPE, stderr = subprocess.PIPE)
-                obj.help_info = ''.join(result.stderr.decode("utf-8").split("\n")[2:])
+                obj.help_info = ' '.join(list(filter(None, result.stderr.decode("utf-8").split("\n")[2:])))
                 if name in os.listdir("examplejobs"):
                     try:
                         submit_script = glob.glob(os.path.join("examplejobs", name, "*.sh"))[0]
@@ -110,4 +110,4 @@ class Command(BaseCommand):
                     with open(submit_script, "r") as f:
                         tmp = f.readlines()
                         obj.slurm_submission_example = ''.join(tmp)
-            obj.save()
+                obj.save()
