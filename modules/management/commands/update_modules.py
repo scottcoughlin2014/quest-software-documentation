@@ -82,7 +82,8 @@ class Command(BaseCommand):
                     versions = result.stderr.decode("utf-8").split("Versions:\n")[1].split("\n\n")[0].replace(" ", "").split("\n")
 
                 obj, created = Module.objects.get_or_create(name=name,)
-                obj.keywords = None
+                obj.primary_keywords = None
+                obj.secondary_keywords = None
                 obj.save()
                 obj.versions = versions
                 obj.preferred = versions[-1]
@@ -96,9 +97,16 @@ class Command(BaseCommand):
                 if len(whatis_output) > 1:
                     for i in whatis_output:
                         for ii in i:
-                            if "Keywords" in ii:
-                                keywords = [tmp.replace(" ", "").split(",") for tmp in ii.split(";")[1:]][0]
-                                obj.keywords = keywords
+                            if "Primary Keywords" in ii:
+                                primary_keywords = [tmp1.replace(" ", "", 1) for tmp1 in [tmp.split(",") for tmp in ii.split(";")[1:]][0]]
+                                primary_keywords[-1] = " ".join(primary_keywords[-1].split(" ")[0:-1])
+                                print(primary_keywords)
+                                obj.primary_keywords = primary_keywords
+                            elif "Secondary Keywords" in ii:
+                                secondary_keywords = [tmp1.replace(" ", "", 1) for tmp1 in [tmp.split(",") for tmp in ii.split(";")[1:]][0]]
+                                secondary_keywords[-1] = " ".join(secondary_keywords[-1].split(" ")[0:-1])
+                                print(secondary_keywords)
+                                obj.secondary_keywords = secondary_keywords
 
                 result = subprocess.run(["/software/lmod/lmod/libexec/lmod", "help", versions[-1]], stdout=subprocess.PIPE, stdin = subprocess.PIPE, stderr = subprocess.PIPE)
                 obj.help_info = ' '.join(list(filter(None, result.stderr.decode("utf-8").split("\n")[2:])))

@@ -8,8 +8,8 @@ def index(request):
     modules = Module.objects.order_by('name')
     all_keywords = []
     for module in modules:
-        if module.keywords is not None:
-            for keyword in module.keywords:
+        if module.primary_keywords is not None:
+            for keyword in module.primary_keywords:
                 all_keywords.append(keyword)
     all_keywords = set(all_keywords)
     

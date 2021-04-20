@@ -10,7 +10,8 @@ class Module(models.Model):
     help_info = RichTextField(help_text='Help information that comes from running module help XXX.', null=True, blank=True,)
     whatis = RichTextField(help_text='module whatis that comes from running module whatis', null=True, blank=True,)
     slurm_submission_example = RichTextField(help_text='If available, an example of running this software with slurm. All options should be here: https://github.com/scottcoughlin2014/examplejobs/', null=True, blank=True,)
-    keywords = models.JSONField(help_text='A list of descriptors like chemistry or data analysis which describe the uses of this module', null=True, blank=True)
+    primary_keywords = models.JSONField(help_text='Primary top-level words to describe the use of this module like chemistry or data analysis.', null=True, blank=True)
+    secondary_keywords = models.JSONField(help_text='Additional words that might be used to describe the purposes of this software like DFT.', null=True, blank=True)
 
     def __str__(self):
         return self.name
