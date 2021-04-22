@@ -11,9 +11,9 @@
   <!-- Add additional CSS in static file -->
   <style type="text/css">
     html, body {
-        background: #ECF1FF;
+        background: white;
         color: #4e2a84;
-        font: 400 18px/1.5 'Avenir', Helvetica, sans-serif;
+        font: "Akkurat Pro Regular",sans-serif;
         margin: 0;
         height:100%;
         width:100%;
@@ -82,7 +82,7 @@
 </p>
 
 <nav class="navbar navbar-light bg-light justify-content-start">
-<a href="#" onclick="togglerall();">Show All</a><a class="nav-link justify-content-start" href="#" onclick="toggler('Chemistry');">Chemistry</a><a class="nav-link justify-content-start" href="#" onclick="toggler('chemistry');">chemistry</a>
+<a href="#" onclick="togglerall();">Show All</a><a class="nav-link justify-content-start" href="#" onclick="toggler('chemistry');">chemistry</a><a class="nav-link justify-content-start" href="#" onclick="toggler('Chemistry');">Chemistry</a>
 </nav>
 <br>
 <div>
@@ -107,6 +107,8 @@
     <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_charmpp" role="tab" aria-controls="collapse_charmpp">charmpp</a>
 
     <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_cmake" role="tab" aria-controls="collapse_cmake">cmake</a>
+
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_cp2k" role="tab" aria-controls="collapse_cp2k">cp2k</a>
 
     <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_cuda" role="tab" aria-controls="collapse_cuda">cuda</a>
 
@@ -518,6 +520,35 @@ mpirun -np $SLURM_NTASKS abinit <tbase1_x.files> log.stdout
                                  <br>
                                  <b>Module Help:</b>
                                      <p>This module adds cmake/3.15.4<p>
+                                 <br>
+                                 <b>Slurm Example (If available):</b>
+                                 <br>
+                                 <pre class="code">None</pre>
+                             </div>
+                         </div>
+                    </div>
+                
+                    <div class="card  ">
+                         <div class="card-header" id="heading_cp2k">
+                             <h2 class="mb-0">
+                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_cp2k" aria-expanded="true" aria-controls="collapse_cp2k">
+                                 cp2k
+                                 </button>
+                             </h2>
+                         </div>
+                         <div id="collapse_cp2k" class="collapse" aria-labelledby="heading_cp2k" data-parent="#accordionExample">
+                             <div class="card-body">
+                                 <b>Tags:</b> 
+                                 <br>
+                                 <b>Available Versions:</b>  <pre class="code">cp2k/2.3</pre>  <pre class="code">cp2k/2.5</pre>  <pre class="code">cp2k/5.1</pre> 
+                                 <br>
+                                 <b>Preferred Version:</b> <pre class="code">cp2k/5.1</pre>
+                                 <br>
+                                 <b>Module Whatis:</b> 
+                                     <p> Sets up serial cp2k in your environment. Name of Executable<p>
+                                 <br>
+                                 <b>Module Help:</b>
+                                     <p>This module adds serial cp2k version 5.1 to various paths Name of executable: cp2k.sopt<p>
                                  <br>
                                  <b>Slurm Example (If available):</b>
                                  <br>
@@ -1488,9 +1519,9 @@ mpirun -np ${SLURM_NTASKS} nwchem nwch.nw
                              <div class="card-body">
                                  <b>Tags:</b> 
                                  <br>
-                                 <b>Available Versions:</b>  <pre class="code">openblas/0.3.10-intel-19.0.5.281</pre> 
+                                 <b>Available Versions:</b>  <pre class="code">openblas/0.3.10-intel-19.0.5.281</pre>  <pre class="code">openblas/0.3.14-gcc-10.2.0</pre> 
                                  <br>
-                                 <b>Preferred Version:</b> <pre class="code">openblas/0.3.10-intel-19.0.5.281</pre>
+                                 <b>Preferred Version:</b> <pre class="code">openblas/0.3.14-gcc-10.2.0</pre>
                                  <br>
                                  <b>Module Whatis:</b> 
                                      <p> OpenBLAS<p>
@@ -2143,6 +2174,10 @@ $("#collapse_charmpp").on('shown.bs.collapse', function() {
     
 $("#collapse_cmake").on('shown.bs.collapse', function() {
     window.location = "#heading_cmake";
+});
+    
+$("#collapse_cp2k").on('shown.bs.collapse', function() {
+    window.location = "#heading_cp2k";
 });
     
 $("#collapse_cuda").on('shown.bs.collapse', function() {
