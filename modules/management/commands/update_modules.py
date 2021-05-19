@@ -4,6 +4,8 @@ import subprocess
 import os
 import glob
 
+PRIMARY_KEYWORDS = ["chemistry"]
+
 LIST_OF_MODULES_TO_SEARCH = [
 "ADF",
 "R",
@@ -15,6 +17,7 @@ LIST_OF_MODULES_TO_SEARCH = [
 "boost",
 "charmpp",
 "cmake",
+"cp2k",
 "cuda",
 "fftw",
 "firefox",
@@ -39,6 +42,7 @@ LIST_OF_MODULES_TO_SEARCH = [
 "lumerical",
 "mathematica",
 "matlab",
+"mercurial",
 "mpi",
 "namd",
 "netcdf-c",
@@ -97,15 +101,17 @@ class Command(BaseCommand):
                 if len(whatis_output) > 1:
                     for i in whatis_output:
                         for ii in i:
-                            if "Primary Keywords" in ii:
-                                primary_keywords = [tmp1.replace(" ", "", 1) for tmp1 in [tmp.split(",") for tmp in ii.split(";")[1:]][0]]
-                                primary_keywords[-1] = " ".join(primary_keywords[-1].split(" ")[0:-1])
-                                print(primary_keywords)
+                            if "Keywords" in ii:
+                                keywords = [tmp1.replace(" ", "", 1) for tmp1 in [tmp.split(",") for tmp in ii.split(";")[1:]][0]]
+                                keywords[-1] = " ".join(keywords[-1].split(" ")[0:-1])
+                                primary_keywords = []
+                                secondary_keywords = []
+                                for kw in keywords:
+                                    if kw in PRIMARY_KEYWORDS:
+                                        primary_keywords.append(kw)
+                                    else:
+                                        secondary_keywords.append(kw)
                                 obj.primary_keywords = primary_keywords
-                            elif "Secondary Keywords" in ii:
-                                secondary_keywords = [tmp1.replace(" ", "", 1) for tmp1 in [tmp.split(",") for tmp in ii.split(";")[1:]][0]]
-                                secondary_keywords[-1] = " ".join(secondary_keywords[-1].split(" ")[0:-1])
-                                print(secondary_keywords)
                                 obj.secondary_keywords = secondary_keywords
 
                 result = subprocess.run(["/software/lmod/lmod/libexec/lmod", "help", versions[-1]], stdout=subprocess.PIPE, stdin = subprocess.PIPE, stderr = subprocess.PIPE)
