@@ -82,7 +82,7 @@
 </p>
 
 <nav class="navbar navbar-light bg-light justify-content-start">
-<a href="#" onclick="togglerall();">Show All</a><a class="nav-link justify-content-start" href="#" onclick="toggler('chemistry');">chemistry</a><a class="nav-link justify-content-start" href="#" onclick="toggler('Chemistry');">Chemistry</a>
+<a href="#" onclick="togglerall();">Show All</a><a class="nav-link justify-content-start" href="#" onclick="toggler('chemistry');">chemistry</a>
 </nav>
 <br>
 <div>
@@ -453,15 +453,15 @@ mpirun -np $SLURM_NTASKS abinit <tbase1_x.files> log.stdout
                              <div class="card-body">
                                  <b>Tags:</b> 
                                  <br>
-                                 <b>Available Versions:</b>  <pre class="code">boost/1.41.0</pre>  <pre class="code">boost/1.56.0</pre>  <pre class="code">boost/1.57.0</pre>  <pre class="code">boost/1.58.0</pre>  <pre class="code">boost/1.61.0</pre>  <pre class="code">boost/1.64.0</pre>  <pre class="code">boost/1.65.1</pre>  <pre class="code">boost/1.70.0</pre> 
+                                 <b>Available Versions:</b>  <pre class="code">boost/1.41.0</pre>  <pre class="code">boost/1.56.0</pre>  <pre class="code">boost/1.57.0</pre>  <pre class="code">boost/1.58.0</pre>  <pre class="code">boost/1.61.0</pre>  <pre class="code">boost/1.64.0</pre>  <pre class="code">boost/1.65.1</pre>  <pre class="code">boost/1.70.0-openmpi-4.0.5-intel-19.0.5.281</pre>  <pre class="code">boost/1.70.0</pre>  <pre class="code">boost/1.75.0-openmpi-4.0.5-gcc-10.2.0</pre> 
                                  <br>
-                                 <b>Preferred Version:</b> <pre class="code">boost/1.70.0</pre>
+                                 <b>Preferred Version:</b> <pre class="code">boost/1.75.0-openmpi-4.0.5-gcc-10.2.0</pre>
                                  <br>
                                  <b>Module Whatis:</b> 
-                                     <p> This module adds boost/1.70.0  <p>
+                                     <p> Boost provides free peer-reviewed portable C++ source libraries, emphasizing libraries that work well with the C++ Standard Library. <p>
                                  <br>
                                  <b>Module Help:</b>
-                                     <p>This module adds boost/1.70.0<p>
+                                     <p>Boost provides free peer-reviewed portable C++ source libraries, emphasizing libraries that work well with the C++ Standard Library. Boost libraries are intended to be widely useful, and usable across a broad spectrum of applications. The Boost license encourages both commercial and non-commercial use.<p>
                                  <br>
                                  <b>Slurm Example (If available):</b>
                                  <br>
@@ -540,15 +540,15 @@ mpirun -np $SLURM_NTASKS abinit <tbase1_x.files> log.stdout
                              <div class="card-body">
                                  <b>Tags:</b> 
                                  <br>
-                                 <b>Available Versions:</b>  <pre class="code">cp2k/2.3</pre>  <pre class="code">cp2k/2.5</pre>  <pre class="code">cp2k/5.1</pre> 
+                                 <b>Available Versions:</b>  <pre class="code">cp2k/2.3</pre>  <pre class="code">cp2k/2.5</pre>  <pre class="code">cp2k/5.1</pre>  <pre class="code">cp2k/8.1-openmpi-4.0.5-gcc-10.2.0</pre> 
                                  <br>
-                                 <b>Preferred Version:</b> <pre class="code">cp2k/5.1</pre>
+                                 <b>Preferred Version:</b> <pre class="code">cp2k/8.1-openmpi-4.0.5-gcc-10.2.0</pre>
                                  <br>
                                  <b>Module Whatis:</b> 
-                                     <p> Sets up serial cp2k in your environment. Name of Executable<p>
+                                     <p> CP2K is a quantum chemistry and solid state physics software package that can perform atomistic simulations of solid state, liquid, molecular, periodic, material, crystal, and biological systems  <p>
                                  <br>
                                  <b>Module Help:</b>
-                                     <p>This module adds serial cp2k version 5.1 to various paths Name of executable: cp2k.sopt<p>
+                                     <p>CP2K is a quantum chemistry and solid state physics software package that can perform atomistic simulations of solid state, liquid, molecular, periodic, material, crystal, and biological systems<p>
                                  <br>
                                  <b>Slurm Example (If available):</b>
                                  <br>
@@ -1311,15 +1311,15 @@ mpirun -np ${SLURM_NTASKS} lmp -in in.lj
                              <div class="card-body">
                                  <b>Tags:</b> 
                                  <br>
-                                 <b>Available Versions:</b> 
+                                 <b>Available Versions:</b>  <pre class="code">mercurial/3.2.3</pre> 
                                  <br>
-                                 <b>Preferred Version:</b> <pre class="code">None</pre>
+                                 <b>Preferred Version:</b> <pre class="code">mercurial/3.2.3</pre>
                                  <br>
                                  <b>Module Whatis:</b> 
-                                     <p>None<p>
+                                     <p> This module adds  mercurial 3.2.3 to your path <p>
                                  <br>
                                  <b>Module Help:</b>
-                                     <p>None<p>
+                                     <p>This module adds mercurial 3.2.3 to your path<p>
                                  <br>
                                  <b>Slurm Example (If available):</b>
                                  <br>
@@ -1519,7 +1519,7 @@ mpirun -np ${SLURM_NTASKS} nwchem nwch.nw
                              <div class="card-body">
                                  <b>Tags:</b> 
                                  <br>
-                                 <b>Available Versions:</b>  <pre class="code">openblas/0.3.10-intel-19.0.5.281</pre>  <pre class="code">openblas/0.3.14-gcc-10.2.0</pre> 
+                                 <b>Available Versions:</b>  <pre class="code">openblas/0.3.10-intel-19.0.5.281</pre>  <pre class="code">openblas/0.3.13-gcc-10.2.0</pre>  <pre class="code">openblas/0.3.14-gcc-10.2.0</pre> 
                                  <br>
                                  <b>Preferred Version:</b> <pre class="code">openblas/0.3.14-gcc-10.2.0</pre>
                                  <br>
@@ -1577,19 +1577,36 @@ mpirun -np ${SLURM_NTASKS} nwchem nwch.nw
                              <div class="card-body">
                                  <b>Tags:</b> 
                                  <br>
-                                 <b>Available Versions:</b>  <pre class="code">orca/4.0.1.2</pre>  <pre class="code">orca/4.1.0</pre> 
+                                 <b>Available Versions:</b>  <pre class="code">orca/4.0.1.2</pre>  <pre class="code">orca/4.1.0</pre>  <pre class="code">orca/4.2.1</pre> 
                                  <br>
-                                 <b>Preferred Version:</b> <pre class="code">orca/4.1.0</pre>
+                                 <b>Preferred Version:</b> <pre class="code">orca/4.2.1</pre>
                                  <br>
                                  <b>Module Whatis:</b> 
-                                     <p> This module adds orca/4.1.0  <p>
+                                     <p> This module adds orca/4.2.1  <p>
                                  <br>
                                  <b>Module Help:</b>
-                                     <p>This module adds orca/4.1.0<p>
+                                     <p>This module adds orca/4.2.1<p>
                                  <br>
                                  <b>Slurm Example (If available):</b>
                                  <br>
-                                 <pre class="code">None</pre>
+                                 <pre class="code">#!/bin/bash
+#SBATCH --account=a9009  ## YOUR ACCOUNT pXXXX or bXXXX
+#SBATCH --partition=master  ### PARTITION (buyin, short, normal, etc)
+#SBATCH --nodes=2 ## how many computers do you need
+#SBATCH --ntasks-per-node=4 ## how many cpus or processors do you need on each computer
+#SBATCH --time=00:20:00 ## how long does this need to run (remember different partitions have restrictions on this param)
+#SBATCH --mem-per-cpu=4G ## how much RAM do you need per CPU (this effects your FairShare score so be careful to not ask for more than you need))
+#SBATCH --job-name=sample_job  ## When you run squeue -u NETID this is how you can identify the job
+#SBATCH --output=outlog_orca_4.2.1 ## standard out and standard error goes to this file
+#SBATCH --constraint="[quest5|quest6|quest8|quest9|quest10]"
+
+module purge
+module load orca/4.2.1
+
+export OMPI_MCA_btl=^vader,tcp,openib
+
+/software/orca/4.2.1/orca TDDFT.inp &> results.out
+</pre>
                              </div>
                          </div>
                     </div>
@@ -1631,29 +1648,17 @@ mpirun -np ${SLURM_NTASKS} nwchem nwch.nw
 #SBATCH --mail-user=email@u.northwestern.edu ## your email
 #SBATCH --constraint="[quest5|quest6|quest8|quest9|quest10]" ### you want computers you have requested to be from either quest5 or quest6/7 or quest8 or quest 9 nodes, not a combination of nodes. Import for MPI, not usually import for job arrays)
 
-# Let the user know what's happening
-echo "Launching ParaView 5.8.0 with command: " "$@"
-echo "Slurm nodelist: "$SLURM_NODELIST
-
-# Load pv module
-echo "Loading modules..."
 module purge all
-module load paraview/5.8.0
+module load paraview/5.9.0
 
-# Create the nodelist to pass to MPI for Singularity
-echo "Preparing nodelist..."
-node_list=$(scontrol show hostname ${SLURM_NODELIST} | sort -u)
+# The paraview module is a wrapper around a container. In order to avoid annoying container calls, shell functions have been defined for your convience when submitting jobs on Quest. See all of the function names below.
 
-mp_host_list=""
-for host in ${node_list}; do
-  mp_host_list="${mp_host_list}$host,"
-done
-
-mp_host_list=$(echo ${mp_host_list} | sed -e "s/,$//")
-
-# Launch!
-echo "Launching..."
-mpiexec -hosts $mp_host_list -np ${SLURM_NTASKS} singularity exec -B /projects:/projects /software/paraview/5.8.0-singularity/paraview_pv-v5.8.0-osmesa-py3.sif /opt/paraview/bin/"$@"
+mpi-pvbatch test-pvbatch.py
+#pvbatch XXXX
+#pvserver XXXX
+#pvpython XXXX
+#mpi-pvserver XXXX
+#mpi-pvpython XXXX
 </pre>
                              </div>
                          </div>
@@ -1804,7 +1809,7 @@ mpiexec -hosts $mp_host_list -np ${SLURM_NTASKS} singularity exec -B /projects:/
                          </div>
                     </div>
                 
-                    <div class="card Chemistry  materials-modeling density-functional-theory ">
+                    <div class="card chemistry  materials-modeling density-functional-theory ">
                          <div class="card-header" id="heading_quantum-espresso">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_quantum-espresso" aria-expanded="true" aria-controls="collapse_quantum-espresso">
