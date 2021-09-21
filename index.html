@@ -81,12 +81,27 @@
  </strong>
 </p>
 
+<div class="pos-f-t">
+  <div class="collapse" id="searchbytags">
+    <div class="bg-light p-4">
 <nav class="navbar navbar-light bg-light justify-content-start">
 <a href="#" onclick="togglerall();">Show All</a><a class="nav-link justify-content-start" href="#" onclick="toggler('chemistry');">chemistry</a>
 </nav>
+    </div>
+  </div>
+  <nav class="navbar navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#searchbytags" aria-controls="searchbytags" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      Filter Available Software by Keywords/Tags
+    </button>
+  </nav>
+</div>
 <br>
-<div>
-<nav class="navbar navbar-light bg-light ml-auto">
+
+<div class="pos-f-t">
+  <div class="collapse" id="searchbyname">
+    <div class="bg-light p-4">
+<nav class="navbar navbar-light bg-light justify-content-start">
 
     <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_ADF" role="tab" aria-controls="collapse_ADF">ADF</a>
 
@@ -209,9 +224,17 @@
     <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_texlive" role="tab" aria-controls="collapse_texlive">texlive</a>
 
     <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_vasp" role="tab" aria-controls="collapse_vasp">vasp</a>
-
 </nav>
+    </div>
+  </div>
+  <nav class="navbar navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#searchbyname" aria-controls="searchbyname" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      Search Available Software by Name
+    </button>
+  </nav>
 </div>
+
 <br>
 
 <div class="container-fluid">
