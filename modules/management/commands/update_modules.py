@@ -107,6 +107,8 @@ class Command(BaseCommand):
                                 primary_keywords = []
                                 secondary_keywords = []
                                 for kw in keywords:
+                                    if kw == "None":
+                                        continue
                                     if kw in PRIMARY_KEYWORDS:
                                         primary_keywords.append(kw)
                                     else:
@@ -117,6 +119,7 @@ class Command(BaseCommand):
                 result = subprocess.run(["/software/lmod/lmod/libexec/lmod", "help", versions[-1]], stdout=subprocess.PIPE, stdin = subprocess.PIPE, stderr = subprocess.PIPE)
                 obj.help_info = ' '.join(list(filter(None, result.stderr.decode("utf-8").split("\n")[2:])))
                 if name in os.listdir("examplejobs"):
+                    breakpoint()
                     try:
                         submit_script = glob.glob(os.path.join("examplejobs", name, "*.sh"))[0]
                     except:

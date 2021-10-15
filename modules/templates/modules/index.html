@@ -17,17 +17,40 @@
  </strong>
 </p>
 
-<nav class="navbar navbar-light bg-light justify-content-start">
+<div class="pos-f-t">
+  <div class="collapse" id="searchbytags">
+    <div class="bg-light p-4">
+      <nav class="navbar navbar-light bg-light justify-content-start">
 <a href="#" onclick="togglerall();">Show All</a>{% for kw in all_keywords %}<a class="nav-link justify-content-start" href="#" onclick="toggler('{{kw}}');">{{kw}}</a>{% endfor %}
-</nav>
+      </nav>
+    </div>
+  </div>
+  <nav class="navbar navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#searchbytags" aria-controls="searchbytags" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      Filter Available Software by Keywords/Tags
+    </button>
+  </nav>
+</div>
 <br>
-<div>
-<nav class="navbar navbar-light bg-light ml-auto">
+
+<div class="pos-f-t">
+  <div class="collapse" id="searchbyname">
+    <div class="bg-light p-4">
+      <nav class="navbar navbar-light bg-light justify-content-start">
 {% for module in modules %}
     <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_{{module.name}}" role="tab" aria-controls="collapse_{{module.name}}">{{module.name}}</a>
 {% endfor %}
-</nav>
+    </div>
+  </div>
+  <nav class="navbar navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#searchbyname" aria-controls="searchbyname" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      Search Available Software by Name
+    </button>
+  </nav>
 </div>
+
 <br>
 
 <div class="container-fluid">
