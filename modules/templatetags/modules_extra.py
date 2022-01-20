@@ -7,3 +7,10 @@ register = template.Library()
 @stringfilter
 def makedash(value):
     return value.replace(" ", "-")
+
+@register.filter
+def return_uppercase(l, i):
+    try:
+        return l[i].upper()
+    except:
+        return None
