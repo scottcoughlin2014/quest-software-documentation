@@ -2,6 +2,9 @@
 
 {% block content %}
 
+{% load modules_extra %}
+
+<a id="top"></a>
 <h1> Software on Quest</h1>
 <p>This list is subject to change, and additional software not listed here may be available. For the complete list, run the command,
         <span class="command">module available</span>. Except where noted,
@@ -14,15 +17,70 @@
   Quest Software and Applications
  </strong>
 </p>
-<ul class="navbar">
-<p>
-{% for module in modules %}
-  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse_{{module.name}}" aria-expanded="false" aria-controls="collapse_{{module.name}}">
-        {{module.name}}
+
+<div class="pos-f-t">
+  <nav class="navbar navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#searchbytags" aria-controls="searchbytags" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      Filter Available Software by Keywords/Tags
     </button>
+  </nav>
+  <div class="collapse" id="searchbytags">
+    <div class="bg-light p-4">
+      <nav class="navbar navbar-light bg-light justify-content-start">
+<a href="#" onclick="togglerall();">Show All</a>{% for kw in all_keywords %}<a class="nav-link justify-content-start" href="#" onclick="toggler('{{kw|makedash}}');">{{kw}}</a>{% endfor %}
+      </nav>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<div class="pos-f-t">
+  <nav class="navbar navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#searchbypopular" aria-controls="searchbypopular" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+     Search for Common/Popular Software by Name
+    </button>
+  </nav>
+  <div class="collapse" id="searchbypopular">
+    <div class="bg-light p-4">
+      <nav class="navbar navbar-light bg-light justify-content-start">
+{% for module in popular_software %}
+    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_{{module}}" role="tab" aria-controls="collapse_{{module}}">{{module}}</a>
 {% endfor %}
-</p>
-</ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<div class="pos-f-t">
+  <nav class="navbar navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#searchbyname" aria-controls="searchbyname" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      Search All Available Software by Name
+    </button>
+  </nav>
+  <div class="collapse" id="searchbyname">
+    <div class="bg-light p-4">
+{% for letter in letters_a_to_z %}
+        <h4>{{letter}}:</h4>
+          <nav class="navbar navbar-light bg-light justify-content-start">
+    {% for module in modules %}
+        {% if module.name|return_uppercase:0 == letter %}
+          <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_{{module.name}}" role="tab" aria-controls="collapse_{{module.name}}">{{module.name}}</a>
+        {% endif %}
+    {% endfor %}
+          </nav>
+{% endfor %}
+    </div>
+  </div>
+</div>
+
+<br>
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-1">
@@ -30,7 +88,7 @@
         <div class="col-sm-9">
             <div class="accordion" id="accordionExample">
                 {% for module in modules %}
-                    <div class="card">
+                    <div class="card {% for keyword in module.primary_keywords %}{{ keyword|makedash }} {% endfor %} {% for keyword in module.secondary_keywords %}{{ keyword|makedash }} {% endfor %}">
                          <div class="card-header" id="heading_{{module.name}}">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_{{module.name}}" aria-expanded="true" aria-controls="collapse_{{module.name}}">
@@ -40,7 +98,11 @@
                          </div>
                          <div id="collapse_{{module.name}}" class="collapse" aria-labelledby="heading_{{module.name}}" data-parent="#accordionExample">
                              <div class="card-body">
-                                 Available Versions: {% for version in module.versions %} <pre class="code">{{version|safe}}</pre> {% endfor %}
+                                 <a href="#top">Back to top</a>
+                                 <br>
+                                 <b>Tags:</b> <nav class="navbar navbar-light justify-content-start">{% for keyword in module.secondary_keywords %}<a class="nav-link justify-content-start" href="#" onclick="toggler('{{keyword|makedash}}');">{{keyword}}</a>{% endfor %}</nav>
+                                 <br>
+                                 <b>Available Versions:</b> {% for version in module.versions %} <pre class="code">{{version|safe}}</pre> {% endfor %}
                                  <br>
                                  <b>Preferred Version:</b> <pre class="code">{{module.preferred}}</pre>
                                  <br>
@@ -53,6 +115,8 @@
                                  <b>Slurm Example (If available):</b>
                                  <br>
                                  <pre class="code">{{module.slurm_submission_example|safe}}</pre>
+                                 <br>
+                                 <a href="#top">Back to top</a>
                              </div>
                          </div>
                     </div>
@@ -71,6 +135,27 @@ $("#collapse_{{module.name}}").on('shown.bs.collapse', function() {
 });
     {% endfor %}
 });
+</script>
+
+<script type="text/javascript">
+function toggler(divId) {
+    $("div.card").each(function( index ) {
+        if(!($(this).attr("class").split(" ").includes(divId))){
+            if ($( this ).is( ":visible" )){$(this).toggle();};
+        }
+        else{ 
+            if ($( this ).is( ":hidden" )){$(this).toggle();};
+        }
+    });
+}
+</script>
+
+<script type="text/javascript">
+function togglerall() {
+    $("div.card").each(function( index ) {
+        if ($( this ).is( ":hidden" )){$(this).toggle();};
+    });
+}
 </script>
 
 {% endblock %}
