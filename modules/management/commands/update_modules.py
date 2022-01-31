@@ -4,7 +4,7 @@ import subprocess
 import os
 import glob
 
-PRIMARY_KEYWORDS = ['programming language', 'quantum chemistry', 'molecular dynamics', 'engineering', 'MRI', 'linear algebra', 'genomics']
+PRIMARY_KEYWORDS = ['IO Libraries and Formats', 'compiler', 'programming language', 'quantum chemistry', 'molecular dynamics', 'engineering', 'MRI', 'linear algebra', 'genomics']
 
 LIST_OF_MODULES_TO_SEARCH = {
 'abaqus' : ['finite element analysis', 'engineering'],

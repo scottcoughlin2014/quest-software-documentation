@@ -36,24 +36,6 @@
 
 <br>
 
-<div class="pos-f-t">
-  <nav class="navbar navbar-light bg-light">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#searchbypopular" aria-controls="searchbypopular" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-     Search for Common/Popular Software by Name
-    </button>
-  </nav>
-  <div class="collapse" id="searchbypopular">
-    <div class="bg-light p-4">
-      <nav class="navbar navbar-light bg-light justify-content-start">
-{% for module in popular_software %}
-    <a class="nav-link" id="list-profile-list" data-toggle="collapse" href="#collapse_{{module}}" role="tab" aria-controls="collapse_{{module}}">{{module}}</a>
-{% endfor %}
-      </nav>
-    </div>
-  </div>
-</div>
-
 <br>
 
 <div class="pos-f-t">
@@ -81,6 +63,18 @@
 
 <br>
 
+<nav class="navbar navbar-light bg-light justify-content-start">
+  <a href="#" onclick="togglerall();">Show All</a>
+</nav>
+<br>
+    <div class="col-sm-4">
+      <input type="search" placeholder="Search all software by name" name="search" class="form-control1 searchbox-input1" required="">
+    </div>
+<br>
+    <div class="col-sm-4">
+      <input type="search" placeholder="Search all software by tag" name="search" class="form-control2 searchbox-input2" required="">
+    </div>
+<br>
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-1">
@@ -100,7 +94,7 @@
                              <div class="card-body">
                                  <a href="#top">Back to top</a>
                                  <br>
-                                 <b>Tags:</b> <nav class="navbar navbar-light justify-content-start">{% for keyword in module.secondary_keywords %}<a class="nav-link justify-content-start" href="#" onclick="toggler('{{keyword|makedash}}');">{{keyword}}</a>{% endfor %}</nav>
+                                 <b>Tags:</b> <nav class="navbar navbar-light justify-content-start">{% for keyword in module.primary_keywords %}<a class="nav-link justify-content-start" href="#" onclick="toggler('{{keyword|makedash}}');">{{keyword}}</a>{% endfor %}{% for keyword in module.secondary_keywords %}<a class="nav-link justify-content-start" href="#" onclick="toggler('{{keyword|makedash}}');">{{keyword}}</a>{% endfor %}</nav>
                                  <br>
                                  <b>Available Versions:</b> {% for version in module.versions %} <pre class="code">{{version|safe}}</pre> {% endfor %}
                                  <br>
@@ -157,5 +151,26 @@ function togglerall() {
     });
 }
 </script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('.searchbox-input1').on('keyup',function () {
+        var filter = $(this).val().toLowerCase(); // get the value of the input, which we filter on
+        $('.container-fluid').find(".card-header:not(:contains(" + filter + "))").parent().css('display','none');
+        $('.container-fluid').find(".card-header:contains(" + filter + ")").parent().css('display','');
+    });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('.searchbox-input2').on('keyup',function () {
+        var filter = $(this).val().toLowerCase(); // get the value of the input, which we filter on
+        $('.container-fluid').find(".card-body:not(:contains(" + filter + "))").parent().parent().css('display','none');
+        $('.container-fluid').find(".card-body:contains(" + filter + ")").parent().parent().css('display','');
+    });
+});
+</script>
+
 
 {% endblock %}
