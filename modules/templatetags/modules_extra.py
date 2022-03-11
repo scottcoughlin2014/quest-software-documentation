@@ -14,3 +14,7 @@ def return_uppercase(l, i):
         return l[i].upper()
     except:
         return None
+
+@register.filter
+def make_lowercase(l):
+    return l.lower()

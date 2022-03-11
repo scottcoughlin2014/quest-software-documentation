@@ -83,7 +83,7 @@
             <div class="accordion" id="accordionExample">
                 {% for module in modules %}
                     <div class="card {% for keyword in module.primary_keywords %}{{ keyword|makedash }} {% endfor %} {% for keyword in module.secondary_keywords %}{{ keyword|makedash }} {% endfor %}">
-                         <div class="card-header" id="heading_{{module.name}}">
+                         <div class="card-header" id="heading_{{module.name|make_lowercase}}">
                              <h2 class="mb-0">
                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_{{module.name}}" aria-expanded="true" aria-controls="collapse_{{module.name}}">
                                  {{module.name}}

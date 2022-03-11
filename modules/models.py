@@ -2,7 +2,6 @@ from django.db import models
 from ckeditor.fields import RichTextField
 
 # Create your models here.
-
 class Module(models.Model):
     name = models.CharField(help_text='The name of the module/software', max_length=100)
     versions = models.JSONField(help_text='All still available versions of this software', null=True, blank=True)
