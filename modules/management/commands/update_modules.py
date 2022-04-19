@@ -5,7 +5,7 @@ import subprocess
 import os
 import glob
 
-PRIMARY_KEYWORDS = ['Has SLURM Example', 'Files and IO', 'Compiler', 'Programming Language', 'Chemistry', 'Molecular Dynamics', 'Engineering', 'Magnetic Resonance Imaging (MRI)', 'Economics', 'Linear Algebra', 'Genomics', 'Audio and Visualization Libraries and Tools', 'Software Tools', 'Astrophysics']
+PRIMARY_KEYWORDS = ['Has SLURM Example', 'Files and IO', 'Programming', 'Computational Chemistry and Materials Science', 'Engineering', 'Magnetic Resonance Imaging (MRI)', 'Economics', 'Linear Algebra', 'Genomics', 'Visualization Libraries and Tools', 'Astrophysics']
 LIST_OF_MODULES_TO_SEARCH = views.LIST_OF_MODULES_TO_SEARCH
 
 class Command(BaseCommand):
