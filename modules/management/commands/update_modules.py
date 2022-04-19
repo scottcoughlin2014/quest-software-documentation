@@ -5,7 +5,7 @@ import subprocess
 import os
 import glob
 
-PRIMARY_KEYWORDS = ['IO Libraries and Formats', 'compiler', 'programming language', 'quantum chemistry', 'molecular dynamics', 'engineering', 'MRI', 'linear algebra', 'genomics']
+PRIMARY_KEYWORDS = ['Has SLURM Example', 'Files and IO', 'Compiler', 'Programming Language', 'Chemistry', 'Molecular Dynamics', 'Engineering', 'Magnetic Resonance Imaging (MRI)', 'Economics', 'Linear Algebra', 'Genomics', 'Audio and Visualization Libraries and Tools', 'Software Tools', 'Astrophysics']
 LIST_OF_MODULES_TO_SEARCH = views.LIST_OF_MODULES_TO_SEARCH
 
 class Command(BaseCommand):
@@ -36,8 +36,27 @@ class Command(BaseCommand):
                         primary_keywords.append(kw)
                     else:
                         secondary_keywords.append(kw)
+
+                # Add examples of submitting the job using SLURM if an example exists 
+                name = name.lower()
+                if name in os.listdir("examplejobs"):
+                    # a special tag for denoting if the software/application has a slurm example
+                    primary_keywords.append('Has SLURM Example')
+                    all_example_scripts = glob.glob(os.path.join("examplejobs", name, "*.sh"))
+                    all_example_scripts.extend(glob.glob(os.path.join("examplejobs", name, "*", "*.sh")))
+                    all_lines = []
+                    if len(all_example_scripts) > 1:
+                        obj.slurm_submission_example = "Examples of SLURM jobs for {0} can be found <a href=https://github.com/nuitrcs/examplejobs/tree/master/{0}>here</a>.".format(name)
+                    else:
+                        for submit_script in all_example_scripts:
+                            with open(submit_script, "r") as f:
+                                tmp = f.readlines()
+                                all_lines.extend(tmp)
+                        obj.slurm_submission_example = ''.join(all_lines)
+
                 obj.primary_keywords = primary_keywords
                 obj.secondary_keywords = secondary_keywords
+
                 if options['update_keywords_only']:
                     obj.save()
                     continue
@@ -57,18 +76,4 @@ class Command(BaseCommand):
 
                 result = subprocess.run(["/software/lmod/lmod/libexec/lmod", "help", versions[-1]], stdout=subprocess.PIPE, stdin = subprocess.PIPE, stderr = subprocess.PIPE)
                 obj.help_info = ' '.join(list(filter(None, result.stderr.decode("utf-8").split("\n")[2:])))
-                # there may be a single example job or multiple
-                name = name.lower()
-                if name in os.listdir("examplejobs"):
-                    all_example_scripts = glob.glob(os.path.join("examplejobs", name, "*.sh"))
-                    all_example_scripts.extend(glob.glob(os.path.join("examplejobs", name, "*", "*.sh")))
-                    all_lines = []
-                    if len(all_example_scripts) > 1:
-                        obj.slurm_submission_example = "Examples of SLURM jobs for {0} can be found <a href=https://github.com/nuitrcs/examplejobs/tree/master/{0}>here</a>.".format(name)
-                    else:
-                        for submit_script in all_example_scripts:
-                            with open(submit_script, "r") as f:
-                                tmp = f.readlines()
-                                all_lines.extend(tmp)
-                        obj.slurm_submission_example = ''.join(all_lines)
                 obj.save()
