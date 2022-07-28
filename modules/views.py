@@ -376,16 +376,60 @@ LIST_OF_MODULES_TO_SEARCH = {
 'zstd' : ['Files and IO'],
 }
 
-
-
-
-LIST_OF_SOFTWARE = list(LIST_OF_MODULES_TO_SEARCH.keys())
+LIST_OF_MODULES_NOT_TO_SEARCH = [
+'firefox',
+'opera',
+'Gaussian.E01',
+'MS-Ropen',
+'at-spi2-atk',
+'at-spi2-core',
+'bwrap',
+'cloog',
+'glib',
+'glibmm',
+'gmp',
+'hwloc',
+'isl',
+'launchmon',
+'libbsd',
+'libdwarf',
+'libepoxy',
+'libffi',
+'libgdiplus',
+'libglvnd',
+'libiconv',
+'libjpeg',
+'libjpeg-turbo',
+'libpng',
+'libsvm',
+'libszip',
+'libtiff',
+'libtool',
+'libvdwxc',
+'libwayland-cursor',
+'libxc',
+'libxcb',
+'libxml2',
+'libxsmm',
+'mpc',
+'mpfr',
+'mrnet',
+'numactl',
+'osu-micro-benchmarks',
+'pbs-drmaa',
+'pcre',
+'pkg-config',
+'readline',
+'root',
+'slurm-drmaa',
+'zlib',
+]
 
 # Create your views here.
 letters_a_to_z = [ i for i in string.ascii_uppercase]
 
 def index(request):
-    modules = Module.objects.filter(name__in=LIST_OF_SOFTWARE)
+    modules = Module.objects.exclude(name__in=LIST_OF_MODULES_NOT_TO_SEARCH)
     all_keywords = []
     for module in modules:
         if module.primary_keywords is not None:
@@ -396,6 +440,6 @@ def index(request):
     return render(request, 'modules/index.html', {"modules" : modules, "all_keywords" : all_keywords, 'letters_a_to_z' : letters_a_to_z})
 
 def module_json(request):
-    modules = Module.objects.filter(name__in=LIST_OF_SOFTWARE)
+    modules = Module.objects.exclude(name__in=LIST_OF_MODULES_NOT_TO_SEARCH)
     modules_list = serializers.serialize('json', modules)
     return HttpResponse(modules_list, content_type="text/json-comment-filtered")

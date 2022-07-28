@@ -6,7 +6,10 @@ import os
 import glob
 
 PRIMARY_KEYWORDS = ['Has SLURM Example', 'Files and IO', 'Programming', 'Computational Chemistry and Materials Science', 'Engineering', 'Magnetic Resonance Imaging (MRI)', 'Economics', 'Linear Algebra', 'Genomics', 'Visualization Libraries and Tools', 'Astrophysics']
-LIST_OF_MODULES_TO_SEARCH = views.LIST_OF_MODULES_TO_SEARCH
+
+DICT_OF_MODULE_NAME_AND_KEYWORDS = views.LIST_OF_MODULES_TO_SEARCH
+
+LIST_OF_MODULES_NOT_TO_SEARCH = views.LIST_OF_MODULES_NOT_TO_SEARCH
 
 class Command(BaseCommand):
     help = 'Update the database with the latest modules'
@@ -19,23 +22,23 @@ class Command(BaseCommand):
         dictionary_modules_and_versions = [{ii[0]: ii[-1].split(",")} for ii in [i.replace(' ','').split(":") for i in result.stderr.decode("utf-8").split("\n") if i]][8:-9]
         for software in dictionary_modules_and_versions:
             for name, versions in software.items():
-                if name not in LIST_OF_MODULES_TO_SEARCH.keys():
+                if name in LIST_OF_MODULES_NOT_TO_SEARCH:
                     continue
 
                 obj, created = Module.objects.get_or_create(name=name,)
                 obj.primary_keywords = None
                 obj.secondary_keywords = None
                 obj.save()
+
                 # Add keywords/tags to either primary or secondary keywords 
                 primary_keywords = []
                 secondary_keywords = []
-                for kw in LIST_OF_MODULES_TO_SEARCH[name]:
-                    if kw == "None":
-                        continue
-                    if kw in PRIMARY_KEYWORDS:
-                        primary_keywords.append(kw)
-                    else:
-                        secondary_keywords.append(kw)
+                if name in DICT_OF_MODULE_NAME_AND_KEYWORDS.keys():
+                    for kw in DICT_OF_MODULE_NAME_AND_KEYWORDS[name]:
+                        if kw in PRIMARY_KEYWORDS:
+                            primary_keywords.append(kw)
+                        else:
+                            secondary_keywords.append(kw)
 
                 # Add examples of submitting the job using SLURM if an example exists 
                 name = name.lower()
